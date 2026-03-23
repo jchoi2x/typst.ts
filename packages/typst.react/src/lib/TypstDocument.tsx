@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
-import { withGlobalRenderer } from '@myriaddreamin/typst.ts/dist/esm/contrib/global-renderer.mjs';
-import * as typst from '@myriaddreamin/typst.ts';
+import { withGlobalRenderer } from '@jchoi2x/typst.ts/dist/esm/contrib/global-renderer.mjs';
+import * as typst from '@jchoi2x/typst.ts';
 import htmlLayerCss from './typst.css?inline';
 
 // const withGlobalRenderer = (...args: any[]) => {
@@ -17,7 +17,7 @@ export interface TypstDocumentProps {
 
 let moduleInitOptions: typst.InitOptions = {
   beforeBuild: [],
-  getModule: () => '/node_modules/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+  getModule: () => '/node_modules/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
 };
 
 export const TypstDocument = ({ fill, artifact, format }: TypstDocumentProps) => {

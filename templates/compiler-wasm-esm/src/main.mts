@@ -1,8 +1,8 @@
 // test import
-// import * as _1 from '@myriaddreamin/typst-ts-renderer';
-// import * as _2 from '@myriaddreamin/typst-ts-web-compiler';
+// import * as _1 from '@jchoi2x/typst-ts-renderer';
+// import * as _2 from '@jchoi2x/typst-ts-web-compiler';
 
-import { createTypstCompiler, createTypstRenderer } from '@myriaddreamin/typst.ts';
+import { createTypstCompiler, createTypstRenderer } from '@jchoi2x/typst.ts';
 import { cachedFontInitOptions } from './cached-font-middleware.mjs';
 
 async function main() {

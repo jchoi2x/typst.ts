@@ -1,4 +1,4 @@
-import type { IncrDomDocClient } from '@myriaddreamin/typst-ts-renderer';
+import type { IncrDomDocClient } from '@jchoi2x/typst-ts-renderer';
 import { Rect, kObject } from './internal.types.mjs';
 import { TypstRenderer, TypstRendererDriver } from './renderer.mjs';
 import {

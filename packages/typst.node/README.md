@@ -1,8 +1,9 @@
-# `@myriaddreamin/typst-ts-node-compiler`
+# `@jchoi2x/typst-ts-node-compiler`
 
 # Usage
 
-See [Node Library Docs](https://myriad-dreamin.github.io/typst.ts/cookery/guide/all-in-one-node.html).
+Fork / packages: [github.com/jchoi2x/typst.ts](https://github.com/jchoi2x/typst.ts).  
+Upstream cookbook (may differ slightly): [all-in-one Node guide](https://myriad-dreamin.github.io/typst.ts/cookery/guide/all-in-one-node.html).
 
 ## Support matrix
 
@@ -48,7 +49,7 @@ The other problem is how to deliver prebuild `binary` to users. Downloading it i
 
 In this package, we choose a better way to solve this problem. We release different `npm packages` for different platforms. And add it to `optionalDependencies` before releasing the `Major` package to npm.
 
-`NPM` will choose which native package should download from `registry` automatically. You can see [npm](./npm) dir for details. And you can also run `yarn add @myriaddreamin/typst-ts-node-compiler` to see how it works.
+`NPM` will choose which native package should download from `registry` automatically. You can see [npm](./npm) dir for details. And you can also run `yarn add @jchoi2x/typst-ts-node-compiler` to see how it works.
 
 ## Develop requirements
 
@@ -77,9 +78,11 @@ $ ava --verbose
 
 ## Release package
 
-Ensure you have set your **NPM_TOKEN** in the `GitHub` project setting.
+This fork publishes **`@jchoi2x/*`** to **GitHub Packages** (`npm.pkg.github.com`), not npmjs.
 
-In `Settings -> Secrets`, add **NPM_TOKEN** into it.
+- **CI**: `.github/workflows/release-node.yaml` uses `NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}` and `registry-url: https://npm.pkg.github.com`. No `NPM_TOKEN` is required.
+- **Local publish**: set `NODE_AUTH_TOKEN` to a PAT with **`write:packages`**, then `npm publish` from the package directory. See **`docs/github-packages.md`** and root **`.npmrc.example`**.
+- If the repo still has an unused **`NPM_TOKEN`** secret from upstream, remove it under **GitHub → Settings → Secrets and variables → Actions** (not editable from git).
 
 When you want to release the package:
 

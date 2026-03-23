@@ -22,7 +22,7 @@ const dirs = [
 for (const dir of dirs) {
   console.log(`Publish ${dir}`);
   try {
-    execSync('npm publish --verbose --provenance --access public', {
+    execSync('npm publish --verbose --access public', {
       stdio: 'inherit',
       cwd: `./npm/${dir}`,
     })

@@ -7,7 +7,7 @@ Typst renderer plugin for Hexo.
 Install Hexo dependencies:
 
 ```shell
-npm install @myriaddreamin/typst.ts @myriaddreamin/typst-ts-renderer @myriaddreamin/typst-ts-node-compiler
+npm install @jchoi2x/typst.ts @jchoi2x/typst-ts-renderer @jchoi2x/typst-ts-node-compiler
 npm install hexo-renderer-typst
 ```
 

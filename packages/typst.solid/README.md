@@ -1,10 +1,10 @@
-# @myriaddreamin/typst.solid
+# @jchoi2x/typst.solid
 
 
 ## Usage
 
 ```ts
-import { TypstDocument } from "@myriaddreamin/typst.solid";
+import { TypstDocument } from "@jchoi2x/typst.solid";
 import { createResource } from "solid-js";
 
 export const App = (artifact: Uint8Array) => {

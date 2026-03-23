@@ -1,7 +1,7 @@
 // test import
-import * as _1 from '@myriaddreamin/typst-ts-renderer';
+import * as _1 from '@jchoi2x/typst-ts-renderer';
 
-import { createTypstRenderer } from '@myriaddreamin/typst.ts';
+import { createTypstRenderer } from '@jchoi2x/typst.ts';
 import { existsSync, readFileSync } from 'fs';
 import * as path from 'path';
 

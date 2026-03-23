@@ -7,7 +7,7 @@
 
 
 ```typescript
-import { TypstDocument } from "@myriaddreamin/typst.solid";
+import { TypstDocument } from "@jchoi2x/typst.solid";
 import { createResource } from "solid-js";
 
 export const App = (artifact: Uint8Array) => {
@@ -65,7 +65,7 @@ The default value is:
 ```ts
 {
   beforeBuild: [],
-  getModule: () => 'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+  getModule: () => 'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
 }
 ```
 

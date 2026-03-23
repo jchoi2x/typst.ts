@@ -1,17 +1,25 @@
 {
-    "name": "@myriaddreamin/typst-all-in-one.ts",
+    "name": "@jchoi2x/typst-all-in-one.ts",
     "version": "0.7.0",
     "description": "Run Typst in JavaScriptWorld with a single bundled library.",
     "author": "Myriad-Dreamin",
     "license": "Apache-2.0",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com",
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jchoi2x/typst.ts"
+    },
     "keywords": [
         "TypeScript",
         "Typst"
     ],
     "bugs": {
-        "url": "https://github.com/Myriad-Dreamin/typst.ts/issues"
+        "url": "https://github.com/jchoi2x/typst.ts/issues"
     },
-    "homepage": "https://myriad-dreamin.github.io/typst.ts/",
+    "homepage": "https://github.com/jchoi2x/typst.ts",
     "type": "module",
     "main": "./dist/cjs/index.js",
     "module": "./dist/esm/index.js",
@@ -40,6 +48,6 @@
         "publish:lib": "npm publish --access public || exit 0"
     },
     "devDependencies": {
-        "@myriaddreamin/typst.ts": "*"
+        "@jchoi2x/typst.ts": "*"
     }
 }

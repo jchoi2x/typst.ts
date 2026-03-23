@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { reactive, onMounted, watch } from 'vue';
-import { $typst } from '@myriaddreamin/typst.ts';
+import { $typst } from '@jchoi2x/typst.ts';
 import setTypst from './set-init-options-typst.ts';
 
 interface prop {

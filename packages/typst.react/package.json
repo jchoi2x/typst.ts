@@ -1,19 +1,23 @@
 {
-  "name": "@myriaddreamin/typst.react",
+  "name": "@jchoi2x/typst.react",
   "version": "0.7.0",
   "description": "Typst.ts for React",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "keywords": [
     "React",
     "TypeScript",
     "Typst"
   ],
   "bugs": {
-    "url": "https://github.com/Myriad-Dreamin/typst.ts/issues"
+    "url": "https://github.com/jchoi2x/typst.ts/issues"
   },
-  "homepage": "https://myriad-dreamin.github.io/typst.ts/",
-  "repository": "https://github.com/Myriad-Dreamin/typst.ts",
+  "homepage": "https://github.com/jchoi2x/typst.ts",
+  "repository": "https://github.com/jchoi2x/typst.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -39,14 +43,14 @@
     "publish:lib": "npm publish --access public || exit 0"
   },
   "peerDependencies": {
-    "@myriaddreamin/typst-ts-renderer": "^0.7.0",
-    "@myriaddreamin/typst.ts": "^0.7.0",
+    "@jchoi2x/typst-ts-renderer": "^0.7.0",
+    "@jchoi2x/typst.ts": "^0.7.0",
     "react": "^17.0.1 || ^18.x || ^19.x",
     "react-dom": "^17.0.1 || ^18.x || ^19.x"
   },
   "devDependencies": {
-    "@myriaddreamin/typst-ts-renderer": "*",
-    "@myriaddreamin/typst.ts": "*",
+    "@jchoi2x/typst-ts-renderer": "*",
+    "@jchoi2x/typst.ts": "*",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "react": "^19.x",

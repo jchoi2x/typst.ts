@@ -1,13 +1,13 @@
 ## Installation
 
 ```bash
-yarn add @myriaddreamin/typst.svelte
+yarn add @jchoi2x/typst.svelte
 ```
 
 ## Usage
 ```svelte
 <script lang="ts">
-    import Typst from "@myriaddreamin/typst.svelte"
+    import Typst from "@jchoi2x/typst.svelte"
 
 	const mainContent = `
                 = Hello Typst

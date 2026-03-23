@@ -5,10 +5,10 @@
 
 = React Library
 
-Use #link("https://www.npmjs.com/package/@myriaddreamin/typst.react")[`@myriaddreamin/typst.react`].
+Use #link("https://www.npmjs.com/package/@jchoi2x/typst.react")[`@jchoi2x/typst.react`].
 
 ```typescript
-import { TypstDocument } from '@myriaddreamin/typst.react';
+import { TypstDocument } from '@jchoi2x/typst.react';
 
 export const App = (artifact: Uint8Array) => {
 return (
@@ -56,7 +56,7 @@ The default value is:
 ```ts
 {
   beforeBuild: [],
-  getModule: () => '/node_modules/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+  getModule: () => '/node_modules/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
 }
 ```
 

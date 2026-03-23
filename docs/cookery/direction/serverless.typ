@@ -15,7 +15,7 @@ It uses #cross-link("/guide/all-in-one.typ")[All-in-one (Simplified) Library for
 ```js
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
+  src="https://cdn.jsdelivr.net/npm/@jchoi2x/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
   id="typst"
 ></script>
 ```
@@ -32,11 +32,11 @@ To load wasm modules compiled from Rust from CDN, you need to set the module pat
 ```js
 $typst.setCompilerInitOptions({
   getModule: () =>
-    'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+    'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
 });
 $typst.setRendererInitOptions({
   getModule: () =>
-    'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+    'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
 });
 ```
 

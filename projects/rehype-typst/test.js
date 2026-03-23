@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import rehypeTypst from '@myriaddreamin/rehype-typst'
+import rehypeTypst from '@jchoi2x/rehype-typst'
 import rehypeStringify from 'rehype-stringify'
 import remarkMath from 'remark-math'
 import remarkParse from 'remark-parse'

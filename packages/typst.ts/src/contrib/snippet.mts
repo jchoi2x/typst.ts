@@ -114,7 +114,7 @@ const isNode =
  * Use the *global shared* compiler instance:
  *
  * ```typescript
- * import { $typst } from '@myriaddreamin/typst.ts';
+ * import { $typst } from '@jchoi2x/typst.ts';
  * ```
  *
  * Note: if you want to compile multiple documents, you should create a new
@@ -703,7 +703,7 @@ export class TypstSnippet {
   static async buildLocalCompiler(this: TypstSnippet) {
     const { createTypstCompiler } = (await import(
       // @ts-ignore
-      '@myriaddreamin/typst.ts/compiler'
+      '@jchoi2x/typst.ts/compiler'
     )) as any as typeof import('../compiler.mjs');
 
     await this.prepareUse();
@@ -716,7 +716,7 @@ export class TypstSnippet {
   static async buildLocalFontResolver(this: TypstSnippet) {
     const { createTypstFontBuilder } = (await import(
       // @ts-ignore
-      '@myriaddreamin/typst.ts/compiler'
+      '@jchoi2x/typst.ts/compiler'
     )) as any as typeof import('../compiler.mjs');
 
     await this.prepareUse();
@@ -730,11 +730,11 @@ export class TypstSnippet {
     // lazy import compile module
     const { createGlobalCompiler } = (await import(
       // @ts-ignore
-      '@myriaddreamin/typst.ts/contrib/global-compiler'
+      '@jchoi2x/typst.ts/contrib/global-compiler'
     )) as any as typeof import('./global-compiler.mjs');
     const { createTypstCompiler } = (await import(
       // @ts-ignore
-      '@myriaddreamin/typst.ts/compiler'
+      '@jchoi2x/typst.ts/compiler'
     )) as any as typeof import('../compiler.mjs');
 
     await this.prepareUse();
@@ -745,7 +745,7 @@ export class TypstSnippet {
   static async buildLocalRenderer(this: TypstSnippet) {
     const { createTypstRenderer } = (await import(
       // @ts-ignore
-      '@myriaddreamin/typst.ts/renderer'
+      '@jchoi2x/typst.ts/renderer'
     )) as any as typeof import('../renderer.mjs');
 
     await this.prepareUse();
@@ -759,11 +759,11 @@ export class TypstSnippet {
     // lazy import renderer module
     const { createGlobalRenderer } = (await import(
       // @ts-ignore
-      '@myriaddreamin/typst.ts/contrib/global-renderer'
+      '@jchoi2x/typst.ts/contrib/global-renderer'
     )) as any as typeof import('./global-renderer.mjs');
     const { createTypstRenderer } = (await import(
       // @ts-ignore
-      '@myriaddreamin/typst.ts/renderer'
+      '@jchoi2x/typst.ts/renderer'
     )) as any as typeof import('../renderer.mjs');
 
     await this.prepareUse();

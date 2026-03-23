@@ -6,16 +6,16 @@ Usage with `highlight.js`:
 <!-- import as cjs, js bundled, wasm bundled -->
 <script
   id="script-main"
-  src="https://cdn.jsdelivr.net/npm/@myriaddreamin/highlighter-typst/dist/cjs/contrib/hljs/typst.bundle.js"
+  src="https://cdn.jsdelivr.net/npm/@jchoi2x/highlighter-typst/dist/cjs/contrib/hljs/typst.bundle.js"
 ></script>
 <!-- import as cjs, js not bundled, wasm bundled -->
-<!-- <script id="script-main" src="https://cdn.jsdelivr.net/npm/@myriaddreamin/highlighter-typst/dist/cjs/contrib/hljs/typst-lite.bundle.js"></script> -->
+<!-- <script id="script-main" src="https://cdn.jsdelivr.net/npm/@jchoi2x/highlighter-typst/dist/cjs/contrib/hljs/typst-lite.bundle.js"></script> -->
 <!-- import as esm, js bundled, wasm bundled -->
-<!-- <script id="script-main" type="module" src="https://cdn.jsdelivr.net/npm/@myriaddreamin/highlighter-typst/dist/esm/contrib/hljs/typst.bundle.js"></script> -->
+<!-- <script id="script-main" type="module" src="https://cdn.jsdelivr.net/npm/@jchoi2x/highlighter-typst/dist/esm/contrib/hljs/typst.bundle.js"></script> -->
 <!-- import as esm, js not bundled, wasm not bundled -->
-<!-- <script id="script-main" type="module" src="https://cdn.jsdelivr.net/npm/@myriaddreamin/highlighter-typst/dist/esm/contrib/hljs/typst-lite.mjs"></script> -->
+<!-- <script id="script-main" type="module" src="https://cdn.jsdelivr.net/npm/@jchoi2x/highlighter-typst/dist/esm/contrib/hljs/typst-lite.mjs"></script> -->
 <!-- import as esm, js bundled, wasm not bundled -->
-<!-- <script id="script-main" type="module" src="https://cdn.jsdelivr.net/npm/@myriaddreamin/highlighter-typst/dist/esm/contrib/hljs/typst-lite.bundle.js"></script> -->
+<!-- <script id="script-main" type="module" src="https://cdn.jsdelivr.net/npm/@jchoi2x/highlighter-typst/dist/esm/contrib/hljs/typst-lite.bundle.js"></script> -->
 
 <script>
   const run = $typst$parserModule.then(() => {

@@ -5,13 +5,13 @@
 
 = Angular Library
 
-Use #link("https://www.npmjs.com/package/@myriaddreamin/typst.angular")[`@myriaddreamin/typst.angular`].
+Use #link("https://www.npmjs.com/package/@jchoi2x/typst.angular")[`@jchoi2x/typst.angular`].
 
 Import the angular module containing the `typst-document` component.
 
 ```typescript
 /// component.module.ts
-import { TypstDocumentModule } from '@myriaddreamin/typst.angular';
+import { TypstDocumentModule } from '@jchoi2x/typst.angular';
 ```
 
 And use directive `typst-document` in your template file.

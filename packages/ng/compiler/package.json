@@ -1,9 +1,21 @@
 {
-  "name": "@myriaddreamin/reflexo-typst-compiler",
+  "name": "@jchoi2x/reflexo-typst-compiler",
   "version": "0.7.0",
   "description": "Compile Typst documents in Browsers.",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jchoi2x/typst.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/jchoi2x/typst.ts/issues"
+  },
+  "homepage": "https://github.com/jchoi2x/typst.ts",
   "keywords": [
     "TypeScript",
     "Typst"
@@ -33,10 +45,10 @@
     "pkg/reflexo_typst_compiler.d.ts"
   ],
   "scripts": {
-    "build:dev": "wasm-pack build --target web --scope myriaddreamin --dev -- --no-default-features --features web,misc",
-    "build:node": "wasm-pack build --target nodejs --scope myriaddreamin -- --no-default-features --features web,misc",
-    "build": "wasm-pack build --target web --scope myriaddreamin -- --no-default-features --features web,misc && node ../../tools/wasm-debundle.mjs",
-    "build:with-fonts": "wasm-pack build --target web --scope myriaddreamin -- --no-default-features --features web,fonts,misc && node ../../tools/wasm-debundle.mjs",
+    "build:dev": "wasm-pack build --target web --scope jchoi2x --dev -- --no-default-features --features web,misc",
+    "build:node": "wasm-pack build --target nodejs --scope jchoi2x -- --no-default-features --features web,misc",
+    "build": "wasm-pack build --target web --scope jchoi2x -- --no-default-features --features web,misc && node ../../tools/wasm-debundle.mjs",
+    "build:with-fonts": "wasm-pack build --target web --scope jchoi2x -- --no-default-features --features web,fonts,misc && node ../../tools/wasm-debundle.mjs",
     "prepublish": "turbo build",
     "publish:dry": "npm publish --dry-run --access public",
     "publish:lib": "npm publish --access public || exit 0",

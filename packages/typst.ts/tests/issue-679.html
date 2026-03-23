@@ -20,18 +20,18 @@
     </style>
     <script
       type="module"
-      src="http://localhost:20810/base/node_modules/@myriaddreamin/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
+      src="http://localhost:20810/base/node_modules/@jchoi2x/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
       id="typst"
     ></script>
     <script>
       document.getElementById('typst').addEventListener('load', function () {
         $typst.setCompilerInitOptions({
           getModule: () =>
-            'http://localhost:20810/base/node_modules/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+            'http://localhost:20810/base/node_modules/@jchoi2x/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
         });
         $typst.setRendererInitOptions({
           getModule: () =>
-            'http://localhost:20810/base/node_modules/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+            'http://localhost:20810/base/node_modules/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
         });
         const fontSize = parseFloat(
           window.getComputedStyle(document.body).getPropertyValue('font-size'),

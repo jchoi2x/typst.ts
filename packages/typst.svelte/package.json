@@ -1,5 +1,5 @@
 {
-	"name": "@myriaddreamin/typst.svelte",
+	"name": "@jchoi2x/typst.svelte",
 	"version": "0.7.0",
 	"scripts": {
 		"dev": "vite dev",
@@ -30,14 +30,14 @@
 	},
 	"peerDependencies": {
 		"svelte": "^5.0.0",
-		"@myriaddreamin/typst-ts-renderer": "0.7.0",
-		"@myriaddreamin/typst-ts-web-compiler": "0.7.0",
-		"@myriaddreamin/typst.ts": "0.7.0"
+		"@jchoi2x/typst-ts-renderer": "0.7.0",
+		"@jchoi2x/typst-ts-web-compiler": "0.7.0",
+		"@jchoi2x/typst.ts": "0.7.0"
 	},
 	"devDependencies": {
-		"@myriaddreamin/typst-ts-renderer": "*",
-		"@myriaddreamin/typst-ts-web-compiler": "*",
-		"@myriaddreamin/typst.ts": "*",
+		"@jchoi2x/typst-ts-renderer": "*",
+		"@jchoi2x/typst-ts-web-compiler": "*",
+		"@jchoi2x/typst.ts": "*",
 		"playwright": "^1.52.0",
 		"typescript": "*",
 		"vite": "*",

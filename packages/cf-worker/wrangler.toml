@@ -2,8 +2,28 @@ name = "typst-cf-worker"
 main = "src/index.ts"
 compatibility_date = "2025-03-01"
 compatibility_flags = ["nodejs_compat"]
+[dev]
+port = 8888
+
+[vars]
+# Optional overrides for font family -> URL(s) mappings used by TypstCompilerDO.
+# Example: {"Fontin":["https://<your-host>/Fontin-Regular.otf"]}
+FONT_FAMILY_URLS_JSON = "{}"
 
 [[rules]]
 type = "CompiledWasm"
 globs = ["**/*.wasm"]
 fallthrough = true
+
+[[rules]]
+type = "Text"
+globs = ["**/*.typ"]
+fallthrough = true
+
+[[durable_objects.bindings]]
+name = "TYPST_COMPILER_DO"
+class_name = "TypstCompilerDO"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["TypstCompilerDO"]

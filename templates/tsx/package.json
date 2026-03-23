@@ -1,15 +1,15 @@
 {
-  "name": "@myriaddreamin/typst-template-ts-node",
+  "name": "@jchoi2x/typst-template-ts-node",
   "private": true,
   "version": "1.0.0",
-  "description": "Template for Typescript+ts-node using @myriaddreamin/typst.ts",
+  "description": "Template for Typescript+ts-node using @jchoi2x/typst.ts",
   "type": "module",
   "module": "src/main.ts",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
   "dependencies": {
-    "@myriaddreamin/typst-ts-renderer": "^0.7.0",
-    "@myriaddreamin/typst.ts": "^0.7.0"
+    "@jchoi2x/typst-ts-renderer": "^0.7.0",
+    "@jchoi2x/typst.ts": "^0.7.0"
   },
   "devDependencies": {
     "@types/web": "^0.0.188",

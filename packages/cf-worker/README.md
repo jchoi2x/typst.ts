@@ -2,8 +2,8 @@
 
 Cloudflare Worker package that imports both Typst wasm npm packages:
 
-- `@myriaddreamin/typst-ts-web-compiler`
-- `@myriaddreamin/typst-ts-renderer`
+- `@jchoi2x/typst-ts-web-compiler`
+- `@jchoi2x/typst-ts-renderer`
 
 ## Local run
 
@@ -11,7 +11,7 @@ From repo root:
 
 ```bash
 yarn install --pure-lockfile
-yarn workspace @myriaddreamin/typst-cf-worker dev
+yarn workspace @jchoi2x/typst-cf-worker dev
 ```
 
 Probe routes:

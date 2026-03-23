@@ -117,9 +117,9 @@ const fn yarn_cmd() -> &'static str {
 }
 
 async fn watch(watch_sub: WatchSubCommands) {
-    let watch_renderer_cmd = "yarn workspace @myriaddreamin/typst-ts-renderer watch";
+    let watch_renderer_cmd = "yarn workspace @jchoi2x/typst-ts-renderer watch";
     let watch_renderer_group = ("renderer", watch_renderer_cmd);
-    let watch_core_cmd = "yarn workspace @myriaddreamin/typst.ts build:dev";
+    let watch_core_cmd = "yarn workspace @jchoi2x/typst.ts build:dev";
     let watch_core_group = ("core", watch_core_cmd);
     let serve_http_cmd = "yarn dev:run";
     let serve_http_group = ("http", serve_http_cmd);

@@ -1,5 +1,5 @@
-import { TypstParserBuilder } from '@myriaddreamin/typst-ts-parser';
-import type { TypstParser } from '@myriaddreamin/typst-ts-parser';
+import { TypstParserBuilder } from '@jchoi2x/typst-ts-parser';
+import type { TypstParser } from '@jchoi2x/typst-ts-parser';
 import {
   SemanticTokensProviderStylingConstants,
   toMultilineTokens2,

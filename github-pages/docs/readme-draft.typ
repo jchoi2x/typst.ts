@@ -91,7 +91,7 @@ Visualized Feature:
 
 - #link("https://www.npmjs.com/package/hexo-renderer-typst")[Renderer Plugin for Hexo, a Blog-aware Static Site Generator]
 
-- Renderer/Component Library for #link("https://www.npmjs.com/package/@myriaddreamin/typst.ts")[JavaScript], #link("https://www.npmjs.com/package/@myriaddreamin/typst.react")[React], and #link("https://www.npmjs.com/package/@myriaddreamin/typst.angular")[Angular]
+- Renderer/Component Library for #link("https://www.npmjs.com/package/@jchoi2x/typst.ts")[JavaScript], #link("https://www.npmjs.com/package/@jchoi2x/typst.react")[React], and #link("https://www.npmjs.com/package/@jchoi2x/typst.angular")[Angular]
 
 == Installation
 
@@ -174,17 +174,17 @@ The renderer accepts an input in artifact format and renders the document as HTM
 
 Import Typst.ts in your project:
 
-- Using #link("https://www.npmjs.com/package/@myriaddreamin/typst.ts")[\@myriaddreamin/typst.ts]
+- Using #link("https://www.npmjs.com/package/@jchoi2x/typst.ts")[\@jchoi2x/typst.ts]
 
   ```ts
-  import { createTypstRenderer } from '@myriaddreamin/typst.ts';
+  import { createTypstRenderer } from '@jchoi2x/typst.ts';
   const renderer = createTypstRenderer();
   ```
 
-- Using #link("https://www.npmjs.com/package/@myriaddreamin/typst.react")[\@myriaddreamin/typst.react]
+- Using #link("https://www.npmjs.com/package/@jchoi2x/typst.react")[\@jchoi2x/typst.react]
 
   ```tsx
-  import { TypstDocument } from '@myriaddreamin/typst.react';
+  import { TypstDocument } from '@jchoi2x/typst.react';
 
   export const App = (artifact: string) => {
     return (
@@ -196,13 +196,13 @@ Import Typst.ts in your project:
   };
   ```
 
-- Using #link("https://www.npmjs.com/package/@myriaddreamin/typst.angular")[\@myriaddreamin/typst.angular]
+- Using #link("https://www.npmjs.com/package/@jchoi2x/typst.angular")[\@jchoi2x/typst.angular]
 
   In the module file of your awesome component.
 
   ```ts
   /// component.module.ts
-  import { TypstDocumentModule } from '@myriaddreamin/typst.angular';
+  import { TypstDocumentModule } from '@jchoi2x/typst.angular';
   ```
 
   Using directive `typst-document` in your template file.
@@ -211,7 +211,7 @@ Import Typst.ts in your project:
   <typst-document fill="#343541" artifact="{{ artifact }}"></typst-document>
   ```
 
-- Using #link("https://www.npmjs.com/package/@myriaddreamin/typst.vue3")[\@myriaddreamin/typst.vue3]
+- Using #link("https://www.npmjs.com/package/@jchoi2x/typst.vue3")[\@jchoi2x/typst.vue3]
 
   Coming soon.
 
@@ -238,4 +238,4 @@ $ yarn dev
 And open `http://127.0.0.1:20810` in your browser.
 
 You can also run `yarn run build:core` instead of `yarn run build:pkg` to build
-core library (`@myriaddreamin/typst.ts`) and avoid building the WASM modules from source.
+core library (`@jchoi2x/typst.ts`) and avoid building the WASM modules from source.

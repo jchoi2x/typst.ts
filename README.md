@@ -1,15 +1,17 @@
 # typst.ts
 
-[Markdown](https://github.com/Myriad-Dreamin/typst.ts/blob/main/README.md) | [typst](./docs/cookery/introduction.typ) |
+**Fork note:** Scoped packages are published as **`@jchoi2x/*`** to [**GitHub Packages**](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry) (`npm.pkg.github.com`), not npmjs. See [docs/github-packages.md](./docs/github-packages.md).
+
+[Markdown](https://github.com/jchoi2x/typst.ts/blob/main/README.md) | [typst](./docs/cookery/introduction.typ) |
 [Online HTML](https://myriad-dreamin.github.io/typst.ts/) |
 [Online SVG](https://myriad-dreamin.github.io/typst.ts/paged) |
 [Online Canvas](https://myriad-dreamin.github.io/typst.ts/canvas-readme/)
 
 <p align="center">
-  <a href="https://github.com/Myriad-Dreamin/typst.ts/actions/workflows/ci.yaml">
-    <img alt="typst_ts::ci" src="https://github.com/Myriad-Dreamin/typst.ts/actions/workflows/ci.yaml/badge.svg"/>
+  <a href="https://github.com/jchoi2x/typst.ts/actions/workflows/ci.yaml">
+    <img alt="typst_ts::ci" src="https://github.com/jchoi2x/typst.ts/actions/workflows/ci.yaml/badge.svg"/>
   </a>
-  <a href="https://github.com/Myriad-Dreamin/typst.ts/blob/main/LICENSE">
+  <a href="https://github.com/jchoi2x/typst.ts/blob/main/LICENSE">
     <img alt="Apache-2 License" src="https://img.shields.io/badge/license-Apache%202-brightgreen"/>
   </a>
 </p>
@@ -23,8 +25,8 @@ $\textcolor{#3c9123}{\textsf{server}}$ and $\textcolor{#0074d9}{\textsf{browser}
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Myriad-Dreamin/typst.ts/blob/main/github-pages/docs/data-flow-standalone.dark.artifact.svg">
-    <img width="100%" alt="Data Flow" src="https://github.com/Myriad-Dreamin/typst.ts/blob/main/github-pages/docs/data-flow-standalone.artifact.svg"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/jchoi2x/typst.ts/blob/main/github-pages/docs/data-flow-standalone.dark.artifact.svg">
+    <img width="100%" alt="Data Flow" src="https://github.com/jchoi2x/typst.ts/blob/main/github-pages/docs/data-flow-standalone.artifact.svg"/>
   </picture>
 </p>
 
@@ -40,8 +42,8 @@ The _Form2: Vector Format_ is developed specially for typst documents, and it ha
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Myriad-Dreamin/typst.ts/blob/main/github-pages/docs/ir-features.dark.artifact.svg">
-    <img width="100%" alt="Data Flow" src="https://github.com/Myriad-Dreamin/typst.ts/blob/main/github-pages/docs/ir-features.artifact.svg"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/jchoi2x/typst.ts/blob/main/github-pages/docs/ir-features.dark.artifact.svg">
+    <img width="100%" alt="Data Flow" src="https://github.com/jchoi2x/typst.ts/blob/main/github-pages/docs/ir-features.artifact.svg"/>
   </picture>
 </p>
 
@@ -49,7 +51,7 @@ So with _Form2_, you can continue rendering the document in different ways:
 
 ##### Static but <ins>responsive</ins> rendering
 
-Example Application: [shiroa](https://github.com/Myriad-Dreamin/shiroa) and the [docs built using it](https://github.com/Myriad-Dreamin/typst.ts/blob/main/packages/typst.ts/preview.html), and [hexo-renderer-typst](https://github.com/Myriad-Dreamin/typst.ts/tree/main/projects/hexo-renderer-typst)
+Example Application: [shiroa](https://github.com/Myriad-Dreamin/shiroa) and the [docs built using it](https://github.com/jchoi2x/typst.ts/blob/main/packages/typst.ts/preview.html), and [hexo-renderer-typst](https://github.com/jchoi2x/typst.ts/tree/main/projects/hexo-renderer-typst)
 
 A compressed artifact containing data for different theme and screen settings. The bundle size of artifacts is optimized for typst documents.
 
@@ -61,7 +63,7 @@ Build a server for compilation with [Compiler Service](https://myriad-dreamin.gi
 
 ##### <ins>Serverless</ins> client-side rendering
 
-Example Application: [single-file](https://github.com/Myriad-Dreamin/typst.ts/blob/main/github-pages/preview.html) and its deployed [demo](https://myriad-dreamin.github.io/typst.ts/preview.html)
+Example Application: [single-file](https://github.com/jchoi2x/typst.ts/blob/main/github-pages/preview.html) and its deployed [demo](https://myriad-dreamin.github.io/typst.ts/preview.html)
 
 Run the entire typst directly in browser, like [typst.app](https://typst.app).
 
@@ -75,33 +77,33 @@ Run the entire typst directly in browser, like [typst.app](https://typst.app).
 
 - [Renderer Plugin for Hexo, a Blog-aware Static Site Generator](https://www.npmjs.com/package/hexo-renderer-typst)
 
-- Renderer/Component Library for [JavaScript](https://www.npmjs.com/package/@myriaddreamin/typst.ts), [React](https://www.npmjs.com/package/@myriaddreamin/typst.react), and [Angular](https://www.npmjs.com/package/@myriaddreamin/typst.angular)
+- Renderer/Component Library for [JavaScript](https://www.npmjs.com/package/@jchoi2x/typst.ts), [React](https://www.npmjs.com/package/@jchoi2x/typst.react), and [Angular](https://www.npmjs.com/package/@jchoi2x/typst.angular)
 
 ### Installation (CLI)
 
 Install latest CLI of typst.ts via cargo:
 
 ```shell
-cargo install --locked --git https://github.com/Myriad-Dreamin/typst.ts typst-ts-cli
+cargo install --locked --git https://github.com/jchoi2x/typst.ts typst-ts-cli
 ```
 
-Or Download the latest release from [GitHub Releases](https://github.com/Myriad-Dreamin/typst.ts/releases).
+Or Download the latest release from [GitHub Releases](https://github.com/jchoi2x/typst.ts/releases).
 
 ### Installation (Packages)
 
 The JavaScript packages are published on [npm](https://www.npmjs.com/).
 
-- Core (Wrapper) Library: [@myriaddreamin/typst.ts][npm::typst.ts]
+- Core (Wrapper) Library: [@jchoi2x/typst.ts][npm::typst.ts]
 
-- React Library: [@myriaddreamin/typst.react][npm::typst.react]
+- React Library: [@jchoi2x/typst.react][npm::typst.react]
 
-- Angular Library: [@myriaddreamin/typst.angular][npm::typst.angular]
+- Angular Library: [@jchoi2x/typst.angular][npm::typst.angular]
 
 - (Internal) Web compiler WASM module:
-  [@myriaddreamin/typst-ts-web-compiler](https://www.npmjs.com/package/@myriaddreamin/typst-ts-web-compiler)
+  [@jchoi2x/typst-ts-web-compiler](https://www.npmjs.com/package/@jchoi2x/typst-ts-web-compiler)
 
 - (Internal) Renderer WASM module:
-  [@myriaddreamin/typst-ts-renderer](https://www.npmjs.com/package/@myriaddreamin/typst-ts-renderer)
+  [@jchoi2x/typst-ts-renderer](https://www.npmjs.com/package/@jchoi2x/typst-ts-renderer)
 
 The rust crates are not published on [crates.io](https://crates.io/) yet, since
 it has the git dependency on [typst](https://github.com/typst/typst).
@@ -112,7 +114,7 @@ it has the git dependency on [typst](https://github.com/typst/typst).
 
 ### Installation (All-in-one Bundle)
 
-Download the latest bundle file from [GitHub Releases](https://github.com/Myriad-Dreamin/typst.ts/releases).
+Download the latest bundle file from [GitHub Releases](https://github.com/jchoi2x/typst.ts/releases).
 
 ### Documentation
 
@@ -138,7 +140,7 @@ Using `all-in-one.bundle.js` from CDN:
     <title>Svg Document</title>
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-all-in-one.ts@0.6.0/dist/esm/index.js"
+      src="https://cdn.jsdelivr.net/npm/@jchoi2x/typst-all-in-one.ts@0.6.0/dist/esm/index.js"
       id="typst"
     ></script>
   </head>
@@ -177,7 +179,7 @@ You can also load the all-in-one bundle file and wasm modules from [jsdelivr](ht
     <title>Svg Document</title>
     <script
       type="module"
-      src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
+      src="https://cdn.jsdelivr.net/npm/@jchoi2x/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
       id="typst"
     ></script>
   </head>
@@ -190,11 +192,11 @@ You can also load the all-in-one bundle file and wasm modules from [jsdelivr](ht
       document.getElementById('typst').addEventListener('load', function () {
         $typst.setCompilerInitOptions({
           getModule: () =>
-            'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+            'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
         });
         $typst.setRendererInitOptions({
           getModule: () =>
-            'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+            'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
         });
 
         const compile = function (mainContent) {
@@ -238,8 +240,8 @@ source](#build-from-source-and-check), you can build and run the project by
 yarn install --pure-lockfile
 # build typst-preview and its dependencies
 turbo build --filter=typst-preview
-@myriaddreamin/typst-ts-renderer:build: cache hit, replaying logs bc0a0b151bd8eb6d
-@myriaddreamin/typst.ts:build: cache hit, replaying logs 729cb43a3242b80
+@jchoi2x/typst-ts-renderer:build: cache hit, replaying logs bc0a0b151bd8eb6d
+@jchoi2x/typst.ts:build: cache hit, replaying logs 729cb43a3242b80
 typst-preview-frontend:build: cache miss, executing 5ae30471e8957877
 typst-preview-frontend:build: ...
 typst-preview-frontend:build: ✓ built in 1.25s
@@ -270,7 +272,7 @@ $ yarn dev
 And open `http://127.0.0.1:20810` in your browser.
 
 You can also run `yarn run build:core` instead of `yarn run build:pkg` to build
-core library (`@myriaddreamin/typst.ts`) and avoid building the WASM modules from source.
+core library (`@jchoi2x/typst.ts`) and avoid building the WASM modules from source.
 
 <!-- ### Example: generate documentation site for packages developers.
 
@@ -297,10 +299,10 @@ The precompiler is capable of producing artifact outputs from a Typst project. T
 Install latest precompiler via cargo:
 
 ```shell
-cargo install --locked --git https://github.com/Myriad-Dreamin/typst.ts typst-ts-cli
+cargo install --locked --git https://github.com/jchoi2x/typst.ts typst-ts-cli
 ```
 
-Or Download the latest release from [GitHub Releases](https://github.com/Myriad-Dreamin/typst.ts/releases).
+Or Download the latest release from [GitHub Releases](https://github.com/jchoi2x/typst.ts/releases).
 
 ### Concept: Renderer
 
@@ -308,10 +310,10 @@ The renderer accepts an input in artifact format and renders the document as HTM
 
 Import `typst.ts` in your project:
 
-- Using [@myriaddreamin/typst.ts][npm::typst.ts]
+- Using [@jchoi2x/typst.ts][npm::typst.ts]
 
   ```typescript
-  import { $typst } from '@myriaddreamin/typst.ts/dist/esm/contrib/snippet.mjs';
+  import { $typst } from '@jchoi2x/typst.ts/dist/esm/contrib/snippet.mjs';
   const mainContent = 'Hello, typst!';
 
   console.log(await $typst.svg({ mainContent }));
@@ -328,10 +330,10 @@ Import `typst.ts` in your project:
 
   Further reading: [Get Started with Typst.ts](https://myriad-dreamin.github.io/typst.ts/cookery/get-started.html)
 
-- Using [@myriaddreamin/typst.react][npm::typst.react]
+- Using [@jchoi2x/typst.react][npm::typst.react]
 
   ```typescript
-  import { TypstDocument } from '@myriaddreamin/typst.react';
+  import { TypstDocument } from '@jchoi2x/typst.react';
 
   export const App = (artifact: Uint8Array) => {
     return (
@@ -343,13 +345,13 @@ Import `typst.ts` in your project:
   };
   ```
 
-- Using [@myriaddreamin/typst.angular][npm::typst.angular]
+- Using [@jchoi2x/typst.angular][npm::typst.angular]
 
   In the module file of your awesome component.
 
   ```typescript
   /// component.module.ts
-  import { TypstDocumentModule } from '@myriaddreamin/typst.angular';
+  import { TypstDocumentModule } from '@jchoi2x/typst.angular';
   ```
 
   Using directive `typst-document` in your template file.
@@ -358,7 +360,7 @@ Import `typst.ts` in your project:
   <typst-document fill="#343541" artifact="{{ artifact }}"></typst-document>
   ```
 
-- Using [@myriaddreamin/typst.vue3][npm::typst.vue3]
+- Using [@jchoi2x/typst.vue3][npm::typst.vue3]
 
   ```vue
   <template>
@@ -366,7 +368,7 @@ Import `typst.ts` in your project:
   </template>
   ```
 
-- Using typst math equations in Markdown with [@myriaddreamin/rehype-typst][npm::rehype-typst]
+- Using typst math equations in Markdown with [@jchoi2x/rehype-typst][npm::rehype-typst]
 
   Inline style math equations:
 
@@ -382,8 +384,8 @@ Import `typst.ts` in your project:
   </code></pre>
   ```
 
-[npm::typst.ts]: https://www.npmjs.com/package/@myriaddreamin/typst.ts
-[npm::typst.react]: https://www.npmjs.com/package/@myriaddreamin/typst.react
-[npm::typst.angular]: https://www.npmjs.com/package/@myriaddreamin/typst.angular
+[npm::typst.ts]: https://www.npmjs.com/package/@jchoi2x/typst.ts
+[npm::typst.react]: https://www.npmjs.com/package/@jchoi2x/typst.react
+[npm::typst.angular]: https://www.npmjs.com/package/@jchoi2x/typst.angular
 [npm::typst.vue3]: ./packages/typst.vue3/README.md
-[npm::rehype-typst]: https://www.npmjs.com/package/@myriaddreamin/rehype-typst
+[npm::rehype-typst]: https://www.npmjs.com/package/@jchoi2x/rehype-typst

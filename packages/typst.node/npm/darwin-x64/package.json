@@ -1,5 +1,5 @@
 {
-  "name": "@myriaddreamin/typst-ts-node-compiler-darwin-x64",
+  "name": "@jchoi2x/typst-ts-node-compiler-darwin-x64",
   "version": "0.7.0",
   "os": [
     "darwin"
@@ -7,7 +7,7 @@
   "cpu": [
     "x64"
   ],
-  "repository": "https://github.com/Myriad-Dreamin/typst.ts",
+  "repository": "https://github.com/jchoi2x/typst.ts",
   "main": "typst-ts-node-compiler.darwin-x64.node",
   "files": [
     "typst-ts-node-compiler.darwin-x64.node"
@@ -26,7 +26,7 @@
     "node": ">= 10"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
+    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   }
 }

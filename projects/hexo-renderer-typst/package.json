@@ -9,7 +9,7 @@
     "typst",
     "renderer"
   ],
-  "repository": "https://github.com/Myriad-Dreamin/typst.ts",
+  "repository": "https://github.com/jchoi2x/typst.ts",
   "main": "index.cjs",
   "files": [
     "index.cjs",
@@ -20,9 +20,9 @@
   },
   "peerDependencies": {
     "hexo": "^6",
-    "@myriaddreamin/typst.ts": "^0.7.0",
-    "@myriaddreamin/typst-ts-renderer": "^0.7.0",
-    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0"
+    "@jchoi2x/typst.ts": "^0.7.0",
+    "@jchoi2x/typst-ts-renderer": "^0.7.0",
+    "@jchoi2x/typst-ts-node-compiler": "^0.7.0"
   },
   "devDependencies": {},
   "scripts": {

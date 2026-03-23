@@ -1,4 +1,4 @@
-import { $typst } from '@myriaddreamin/typst.ts';
+import { $typst } from '@jchoi2x/typst.ts';
 
 import { cachedFontInitOptions } from './cached-font-middleware.mjs';
 
@@ -6,8 +6,8 @@ async function main() {
   $typst.setCompilerInitOptions(await cachedFontInitOptions());
 
   // Note: You can also use NodeFetchPackageRegistry
-  // import { MemoryAccessModel } from '@myriaddreamin/typst.ts/fs/memory';
-  // import { NodeFetchPackageRegistry } from '@myriaddreamin/typst.ts/fs/package.node';
+  // import { MemoryAccessModel } from '@jchoi2x/typst.ts/fs/memory';
+  // import { NodeFetchPackageRegistry } from '@jchoi2x/typst.ts/fs/package.node';
   // import request from 'sync-request-curl';
   // const m = new MemoryAccessModel();
   // $typst.use(

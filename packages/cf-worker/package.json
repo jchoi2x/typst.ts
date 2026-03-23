@@ -1,5 +1,5 @@
 {
-  "name": "@myriaddreamin/typst-cf-worker",
+  "name": "@jchoi2x/typst-cf-worker",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -9,13 +9,13 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "@myriaddreamin/typst-ts-renderer": "0.7.0",
-    "@myriaddreamin/typst-ts-web-compiler": "0.7.0",
-    "@myriaddreamin/typst.ts": "*"
+    "@jchoi2x/typst-ts-renderer": "0.7.0",
+    "@jchoi2x/typst-ts-web-compiler": "0.7.2",
+    "@jchoi2x/typst.ts": "*"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4",
     "typescript": "5.8.3",
-    "wrangler": "^3"
+    "wrangler": "4.76.0"
   }
 }

@@ -1,0 +1,11 @@
+# Copy to `.npmrc` in your app (or merge these lines into an existing file)
+# to install @jchoi2x/* packages from GitHub Packages.
+#
+# Requires NODE_AUTH_TOKEN at install time (PAT with read:packages; add repo scope if the package repo is private).
+#   export NODE_AUTH_TOKEN=ghp_xxx
+#   npm install @jchoi2x/typst.ts
+#
+# See docs/github-packages.md for publishing and CI setup.
+
+@jchoi2x:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}

@@ -94,11 +94,11 @@ There is also a vite integration providing both _compilation and rendering_ func
 You can install them via #link("https://www.npmjs.com/")[npm] or #link("https://yarnpkg.com/")[Yarn] separately (npm as an example):
 
 ```bash
-npm install @myriaddreamin/typst.ts
+npm install @jchoi2x/typst.ts
 # Optional: if you want to run a typst renderer.
-npm install @myriaddreamin/typst-ts-renderer
+npm install @jchoi2x/typst-ts-renderer
 # Optional: if you want to run a typst compiler.
-npm install @myriaddreamin/typst-ts-web-compiler
+npm install @jchoi2x/typst-ts-web-compiler
 ```
 
 === Node.js Integration
@@ -106,7 +106,7 @@ npm install @myriaddreamin/typst-ts-web-compiler
 The compiler and renderer are integrated into a same node library for simpler and cleaner APIs, because there is no urgent need to tree-shake the components in node.js applications.
 
 ```bash
-npm install @myriaddreamin/typst-ts-node-compiler
+npm install @jchoi2x/typst-ts-node-compiler
 ```
 
 == A starter example <starter-example>
@@ -120,7 +120,7 @@ To get it in browser, you can load a all-in-one bundle script from CDN and use i
 ```html
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-all-in-one.ts@0.7.0/dist/esm/index.js"
+  src="https://cdn.jsdelivr.net/npm/@jchoi2x/typst-all-in-one.ts@0.7.0/dist/esm/index.js"
   id="typst"
 >
   console.log($typst.svg({
@@ -138,7 +138,7 @@ There is also a #link("https://github.com/Myriad-Dreamin/typst.ts/blob/main/gith
 It is even simpler in Node.js, you can use the all-in-one node library practically:
 
 ```js
-import { $typst } from '@myriaddreamin/typst-ts-node-compiler';
+import { $typst } from '@jchoi2x/typst-ts-node-compiler';
 const compiler = NodeCompiler.create();
 console.log(await compiler.svg({
   mainFileContent: 'Hello, typst!',
@@ -173,10 +173,10 @@ First, compiles the artifacts like the rust and javascript tools above:
 - `typst.ts` + `typst-ts-web-compiler` to compile in browsers.
 
 Then, renders the artifacts using the wrappers:
-- Using #link("https://www.npmjs.com/package/@myriaddreamin/typst.react")[`@myriaddreamin/typst.react`:]
+- Using #link("https://www.npmjs.com/package/@jchoi2x/typst.react")[`@jchoi2x/typst.react`:]
 
   ```tsx
-  import { TypstDocument } from '@myriaddreamin/typst.react';
+  import { TypstDocument } from '@jchoi2x/typst.react';
 
   export const App = (artifact: Uint8Array) => {
     return (
@@ -188,13 +188,13 @@ Then, renders the artifacts using the wrappers:
   };
   ```
 
-- Using #link("https://www.npmjs.com/package/@myriaddreamin/typst.angular")[`@myriaddreamin/typst.angular`:]
+- Using #link("https://www.npmjs.com/package/@jchoi2x/typst.angular")[`@jchoi2x/typst.angular`:]
 
   In the module file of your awesome component.
 
   ```typescript
   /// component.module.ts
-  import { TypstDocumentModule } from '@myriaddreamin/typst.angular';
+  import { TypstDocumentModule } from '@jchoi2x/typst.angular';
   ```
 
   Using directive `typst-document` in your template file.
@@ -203,7 +203,7 @@ Then, renders the artifacts using the wrappers:
   <typst-document fill="#343541" artifact="{{ artifact }}"></typst-document>
   ```
 
-- Using #link("https://www.npmjs.com/package/@myriaddreamin/typst.vue3")[`@myriaddreamin/typst.vue3`:]
+- Using #link("https://www.npmjs.com/package/@jchoi2x/typst.vue3")[`@jchoi2x/typst.vue3`:]
 
   ```vue
   <template>
@@ -211,10 +211,10 @@ Then, renders the artifacts using the wrappers:
   </template>
   ```
 
-- Using #link("https://www.npmjs.com/package/@myriaddreamin/typst.solid")[`@myriaddreamin/typst.solid`:]
+- Using #link("https://www.npmjs.com/package/@jchoi2x/typst.solid")[`@jchoi2x/typst.solid`:]
 
   ```tsx
-  import { TypstDocument } from '@myriaddreamin/typst.solid';
+  import { TypstDocument } from '@jchoi2x/typst.solid';
 
   export const App = (artifact: Uint8Array) => {
     return (
@@ -285,7 +285,7 @@ Then, renders the artifacts using the wrappers:
 // The most simple examples always work with the all-in-one JavaScript Library:
 
 // ```ts
-// import { $typst } from '@myriaddreamin/typst.ts/dist/esm/contrib/snippet.mjs';
+// import { $typst } from '@jchoi2x/typst.ts/dist/esm/contrib/snippet.mjs';
 // console.log((await $typst.svg({
 //   mainContent: 'Hello, typst!' })).length);
 // // :-> 7317
@@ -300,7 +300,7 @@ Then, renders the artifacts using the wrappers:
 
 // Difficulty: #difficult-easy, Example: #bundle-example
 
-// You can include a single bundle file of `@myriaddreamin/typst.ts` in your html file and load needed wasm modules via `fetch` api.
+// You can include a single bundle file of `@jchoi2x/typst.ts` in your html file and load needed wasm modules via `fetch` api.
 
 // ```html
 // <script type="module"
@@ -331,7 +331,7 @@ Then, renders the artifacts using the wrappers:
 
 // ```typescript
 // import { createTypstRenderer } from
-//   '@myriaddreamin/typst.ts/dist/esm/renderer.mjs';
+//   '@jchoi2x/typst.ts/dist/esm/renderer.mjs';
 
 // const renderer = createTypstRenderer();
 // renderer.init({}).then(...);
@@ -366,7 +366,7 @@ Then, renders the artifacts using the wrappers:
 
 // ```typescript
 // import { createTypstRenderer } from
-//   '@myriaddreamin/typst.ts/dist/esm/renderer.mjs';
+//   '@jchoi2x/typst.ts/dist/esm/renderer.mjs';
 
 // const renderer = createTypstRenderer();
 // renderer.init({
@@ -391,7 +391,7 @@ Then, renders the artifacts using the wrappers:
 // People familiar with rust can develop owned wasm modules with typst.ts so that they can eliminate unnecessary features and reduce the size of the final bundle. For example, if you want to build a renderer module that only supports rendering svg, you can build it like this:
 
 // ```shell
-// wasm-pack build --target web --scope myriaddreamin -- --no-default-features --features render_svg
+// wasm-pack build --target web --scope jchoi2x -- --no-default-features --features render_svg
 // ```
 
 // #line(length: 100%)

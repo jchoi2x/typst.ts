@@ -5,8 +5,8 @@ version = "0.7.0"
 edition = "2021"
 readme = "README.md"
 license = "Apache-2.0"
-homepage = "https://myriad-dreamin.github.io/typst.ts/"
-repository = "https://github.com/Myriad-Dreamin/typst.ts"
+homepage = "https://github.com/jchoi2x/typst.ts"
+repository = "https://github.com/jchoi2x/typst.ts"
 rust-version = "1.89"
 
 [workspace]

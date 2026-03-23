@@ -1,10 +1,14 @@
 {
-  "name": "@myriaddreamin/vite-plugin-typst",
+  "name": "@jchoi2x/vite-plugin-typst",
   "version": "0.7.0",
   "description": "Vite plugin for typst",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "type": "module",
   "scripts": {
     "build": "npx tsc",
@@ -13,7 +17,7 @@
     "publish:dry": "npm publish --dry-run",
     "publish:lib": "npm publish --access public || exit 0"
   },
-  "repository": "https://github.com/Myriad-Dreamin/typst.ts",
+  "repository": "https://github.com/jchoi2x/typst.ts",
   "keywords": [
     "vite",
     "vite-plugin",
@@ -27,12 +31,12 @@
     "glob-watcher": "^6.0.0"
   },
   "peerDependencies": {
-    "@myriaddreamin/typst.node": "^0.7.0",
+    "@jchoi2x/typst.node": "^0.7.0",
     "@xmldom/xmldom": "^0.9.8",
     "vite": "^6.2.3 || ^7.0.0"
   },
   "peerDependenciesMeta": {
-    "@myriaddreamin/typst.node": {
+    "@jchoi2x/typst.node": {
       "optional": true
     },
     "@xmldom/xmldom": {

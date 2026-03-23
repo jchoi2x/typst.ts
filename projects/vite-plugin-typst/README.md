@@ -5,20 +5,20 @@ A [Vite](https://vitejs.dev/) plugin for [typst](https://www.typst.app/).
 ## Installation
 
 ```bash
-yarn add -D @myriaddreamin/vite-plugin-typst
+yarn add -D @jchoi2x/vite-plugin-typst
 ```
 
 ### Installing Typst Support
 
 Two providers are expected to work:
 
-- (Default) `@myriaddreamin/typst-ts-node-compiler`: A js integrated compiler for typst, which makes cache shared between typst compilations.
+- (Default) `@jchoi2x/typst-ts-node-compiler`: A js integrated compiler for typst, which makes cache shared between typst compilations.
 - (Compatibility) `typst-cli`: Using the typst cli to compile `.typ` files.
 
-Install the `@myriaddreamin/typst-ts-node-compiler` package to add support for `.typ` files:
+Install the `@jchoi2x/typst-ts-node-compiler` package to add support for `.typ` files:
 
 ```bash
-yarn add -D @myriaddreamin/typst-ts-node-compiler
+yarn add -D @jchoi2x/typst-ts-node-compiler
 ```
 
 ## On-demand JS import (examples/js-import)
@@ -28,7 +28,7 @@ The default usage is simple, just add the plugin to your Vite config:
 ```ts
 // vite.config.ts
 import { defineConfig } from 'vite';
-import typst from '@myriaddreamin/vite-plugin-typst';
+import typst from '@jchoi2x/vite-plugin-typst';
 
 export default defineConfig({
   plugins: [typst()],
@@ -101,7 +101,7 @@ export default defineConfig({
 
 ### Configuring the Typst Compiler
 
-By default, the plugin uses the `@myriaddreamin/typst-ts-node-compiler` compiler. You can set a different compiler:
+By default, the plugin uses the `@jchoi2x/typst-ts-node-compiler` compiler. You can set a different compiler:
 
 ```ts
 // vite.config.ts
@@ -115,7 +115,7 @@ export default defineConfig({
 You can inject query data into `?parts` query by providing a `onResolveParts` function:
 
 ```ts
-import { checkExecResult } from '@myriaddreamin/vite-plugin-typst';
+import { checkExecResult } from '@jchoi2x/vite-plugin-typst';
 
 export default defineConfig({
   plugins: [

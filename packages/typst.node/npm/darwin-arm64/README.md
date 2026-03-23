@@ -1,3 +1,3 @@
-# `@myriaddreamin/typst-ts-node-compiler-darwin-arm64`
+# `@jchoi2x/typst-ts-node-compiler-darwin-arm64`
 
-This is the **aarch64-apple-darwin** binary for `@myriaddreamin/typst-ts-node-compiler`
+This is the **aarch64-apple-darwin** binary for `@jchoi2x/typst-ts-node-compiler`

@@ -5,7 +5,7 @@ Example code:
 ```html
 <head>
   <script type="module">
-    import { TypstJax } from '@myriaddreamin/typst-math';
+    import { TypstJax } from '@jchoi2x/typst-math';
     TypstJax.Config = {
       tex: {
         inlineMath: [

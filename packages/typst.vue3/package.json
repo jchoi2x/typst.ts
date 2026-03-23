@@ -1,5 +1,5 @@
 {
-  "name": "@myriaddreamin/typst.vue3",
+  "name": "@jchoi2x/typst.vue3",
   "version": "0.7.0",
   "type": "module",
   "main": "./dist/index.umd.js",
@@ -12,6 +12,18 @@
       "require": "./dist/index.umd.js"
     }
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jchoi2x/typst.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/jchoi2x/typst.ts/issues"
+  },
+  "homepage": "https://github.com/jchoi2x/typst.ts",
   "scripts": {
     "dev": "vite -c vite.config.dev.ts",
     "build:types": "vue-tsc -p tsconfig.type.json",
@@ -20,8 +32,8 @@
     "publish:lib": "npm publish --access public || exit 0"
   },
   "dependencies": {
-    "@myriaddreamin/typst-ts-renderer": "0.7.0",
-    "@myriaddreamin/typst.ts": "0.7.0"
+    "@jchoi2x/typst-ts-renderer": "0.7.0",
+    "@jchoi2x/typst.ts": "0.7.0"
   },
   "peerDependencies": {
     "vue": "^3.4.31"

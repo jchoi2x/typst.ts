@@ -1,4 +1,4 @@
-import { NodeCompiler } from '@myriaddreamin/typst-ts-node-compiler';
+import { NodeCompiler } from '@jchoi2x/typst-ts-node-compiler';
 import { resolve } from 'path';
 
 async function main() {

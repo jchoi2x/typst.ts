@@ -1,3 +1,3 @@
-# `@myriaddreamin/typst-ts-node-compiler-freebsd-x64`
+# `@jchoi2x/typst-ts-node-compiler-freebsd-x64`
 
-This is the **x86_64-unknown-freebsd** binary for `@myriaddreamin/typst-ts-node-compiler`
+This is the **x86_64-unknown-freebsd** binary for `@jchoi2x/typst-ts-node-compiler`

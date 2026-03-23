@@ -1,8 +1,8 @@
 {
-  "name": "@myriaddreamin/web-react-compiler-template",
+  "name": "@jchoi2x/web-react-compiler-template",
   "private": true,
   "version": "1.0.0",
-  "description": "React Template using @myriaddreamin/typst.ts, with web compiler integrated.",
+  "description": "React Template using @jchoi2x/typst.ts, with web compiler integrated.",
   "module": "dist/esm/main.js",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
@@ -13,9 +13,9 @@
     "test-install": "yarn playwright install-deps && yarn playwright install"
   },
   "dependencies": {
-    "@myriaddreamin/typst-ts-renderer": "^0.7.0",
-    "@myriaddreamin/typst-ts-web-compiler": "^0.7.0",
-    "@myriaddreamin/typst.ts": "^0.7.0",
+    "@jchoi2x/typst-ts-renderer": "^0.7.0",
+    "@jchoi2x/typst-ts-web-compiler": "^0.7.0",
+    "@jchoi2x/typst.ts": "^0.7.0",
     "react": "^19.x",
     "react-dom": "^19.x"
   },

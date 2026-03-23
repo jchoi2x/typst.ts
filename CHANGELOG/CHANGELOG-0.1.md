@@ -90,9 +90,9 @@ No new security note.
 
 #### Feature
 
-- introduce `@myriaddreamin/typst.angular` to provide angular component.
+- introduce `@jchoi2x/typst.angular` to provide angular component.
 
-- reduce the size of `@myriaddreamin/typst.ts` by removing serde and serde_json from dependencies.
+- reduce the size of `@jchoi2x/typst.ts` by removing serde and serde_json from dependencies.
 
   - using `JSON.parse` instead of serde_json.
 
@@ -118,15 +118,15 @@ No new security note.
 
 #### Feature
 
-- upgrade es target of `@myriaddreamin/typst.ts` to es2020.
+- upgrade es target of `@jchoi2x/typst.ts` to es2020.
 
-- publish `@myriaddreamin/typst.react` to npm.
+- publish `@jchoi2x/typst.react` to npm.
 
 - merge [hasher change](https://github.com/typst/typst/commit/d0afba959d18d1c2c646b99e6ddd864b1a91deb2) from upstream, which seems to significantly improves performance.
 
-- add method `runWithSession` to `@myriaddreamin/typst.ts/TypstRenderer`.
+- add method `runWithSession` to `@jchoi2x/typst.ts/TypstRenderer`.
 
-- `@myriaddreamin/typst.ts/TypstRenderer` can now render document with multiple pages.
+- `@jchoi2x/typst.ts/TypstRenderer` can now render document with multiple pages.
 
 #### Bugfix
 
@@ -184,12 +184,12 @@ No new security note.
 
 - introduce `typst_ts_core::config::CompileOpts` for control low-level behavior of compiler.
 
-- add `@myriaddreamin/typst.ts/createTypstRenderer(pdfjsModule): TypstRenderer`.
+- add `@jchoi2x/typst.ts/createTypstRenderer(pdfjsModule): TypstRenderer`.
 
-- add method `init` and method `render` to `@myriaddreamin/typst.ts/TypstRenderer`.
+- add method `init` and method `render` to `@jchoi2x/typst.ts/TypstRenderer`.
 
-- add `@myriaddreamin/typst.ts/preloadRemoteFonts: BeforeBuildFn`.
+- add `@jchoi2x/typst.ts/preloadRemoteFonts: BeforeBuildFn`.
 
-- add `@myriaddreamin/typst.ts/preloadSystemFonts: BeforeBuildFn`.
+- add `@jchoi2x/typst.ts/preloadSystemFonts: BeforeBuildFn`.
 
-- add `@myriaddreamin/typst.react/<TypstDocument fill?='' artifact=''>`.
+- add `@jchoi2x/typst.react/<TypstDocument fill?='' artifact=''>`.
