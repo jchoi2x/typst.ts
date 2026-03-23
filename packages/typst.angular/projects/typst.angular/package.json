@@ -1,8 +1,12 @@
 {
-  "name": "@myriaddreamin/typst.angular",
+  "name": "@jchoi2x/typst.angular",
   "version": "0.7.0",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "keywords": [
     "Angular",
     "TypeScript",
@@ -15,8 +19,8 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@myriaddreamin/typst.ts": "^0.7.0",
-    "@myriaddreamin/typst-ts-renderer": "^0.7.0"
+    "@jchoi2x/typst.ts": "^0.7.0",
+    "@jchoi2x/typst-ts-renderer": "^0.7.0"
   },
   "sideEffects": false
 }

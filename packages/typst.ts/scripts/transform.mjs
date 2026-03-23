@@ -20,8 +20,8 @@ function walk(path, cb) {
 }
 
 const runTransform = (inp, isDcts) => {
-  // replace Promise.resolve().then(() => require('@myriaddreamin/typst-ts-web-compiler/pkg/wasm-pack-shim.mjs'))
-  // to import('@myriaddreamin/typst-ts-web-compiler/pkg/wasm-pack-shim.mjs')
+  // replace Promise.resolve().then(() => require('@jchoi2x/typst-ts-web-compiler/pkg/wasm-pack-shim.mjs'))
+  // to import('@jchoi2x/typst-ts-web-compiler/pkg/wasm-pack-shim.mjs')
 
   // only replace (require("*.mjs")) to (require("*.cjs"))
   // and  replace (from "*.mjs") to (from "*.cjs")

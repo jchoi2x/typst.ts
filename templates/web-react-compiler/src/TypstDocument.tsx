@@ -1,13 +1,13 @@
 import { useRef, useEffect, useState } from 'react';
 
-import type * as typst from '@myriaddreamin/typst.ts';
-import { createGlobalRenderer } from '@myriaddreamin/typst.ts/dist/esm/contrib/global-renderer.mjs';
-import { createTypstRenderer } from '@myriaddreamin/typst.ts/dist/esm/renderer.mjs';
-import { withGlobalCompiler } from '@myriaddreamin/typst.ts/dist/esm/contrib/global-compiler.mjs';
-import { createTypstCompiler } from '@myriaddreamin/typst.ts/dist/esm/compiler.mjs';
-import { preloadRemoteFonts } from '@myriaddreamin/typst.ts/dist/esm/options.init.mjs';
-import compiler from '@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm?url';
-import renderer from '@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm?url';
+import type * as typst from '@jchoi2x/typst.ts';
+import { createGlobalRenderer } from '@jchoi2x/typst.ts/dist/esm/contrib/global-renderer.mjs';
+import { createTypstRenderer } from '@jchoi2x/typst.ts/dist/esm/renderer.mjs';
+import { withGlobalCompiler } from '@jchoi2x/typst.ts/dist/esm/contrib/global-compiler.mjs';
+import { createTypstCompiler } from '@jchoi2x/typst.ts/dist/esm/compiler.mjs';
+import { preloadRemoteFonts } from '@jchoi2x/typst.ts/dist/esm/options.init.mjs';
+import compiler from '@jchoi2x/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm?url';
+import renderer from '@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm?url';
 
 import htmlLayerCss from './typst.css?inline';
 

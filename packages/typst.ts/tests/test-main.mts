@@ -108,7 +108,7 @@ export const makeSnapshot = async (s: { container: HTMLElement, width: number, h
 
 //     use js_sys::Uint8Array;
 
-//     let repo = "http://localhost:20810/base/node_modules/@myriaddreamin/typst-ts-renderer";
+//     let repo = "http://localhost:20810/base/node_modules/@jchoi2x/typst-ts-renderer";
 //     let renderer_wrapper = format!("{repo}/pkg/typst_ts_renderer.mjs");
 //     let renderer_wasm = format!("{repo}/pkg/typst_ts_renderer_bg.wasm");
 

@@ -1,4 +1,4 @@
-const { NodeCompiler, DynLayoutCompiler } = require('@myriaddreamin/typst-ts-node-compiler');
+const { NodeCompiler, DynLayoutCompiler } = require('@jchoi2x/typst-ts-node-compiler');
 const path = require('path');
 
 

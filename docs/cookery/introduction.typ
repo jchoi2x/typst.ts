@@ -68,7 +68,7 @@ So with *Form2*, you can continue rendering the document in different ways:
 
 - #link("https://www.npmjs.com/package/hexo-renderer-typst")[Renderer Plugin for Hexo, a Blog-aware Static Site Generator]
 
-- Renderer/Component Library for #link("https://www.npmjs.com/package/@myriaddreamin/typst.ts")[JavaScript], #link("https://www.npmjs.com/package/@myriaddreamin/typst.react")[React], and #link("https://www.npmjs.com/package/@myriaddreamin/typst.angular")[Angular]
+- Renderer/Component Library for #link("https://www.npmjs.com/package/@jchoi2x/typst.ts")[JavaScript], #link("https://www.npmjs.com/package/@jchoi2x/typst.react")[React], and #link("https://www.npmjs.com/package/@jchoi2x/typst.angular")[Angular]
 
 == Further reading
 

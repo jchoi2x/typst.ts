@@ -1,5 +1,5 @@
-import { withGlobalRenderer } from "@myriaddreamin/typst.ts/dist/esm/contrib/global-renderer.mjs";
-import * as typst from "@myriaddreamin/typst.ts";
+import { withGlobalRenderer } from "@jchoi2x/typst.ts/dist/esm/contrib/global-renderer.mjs";
+import * as typst from "@jchoi2x/typst.ts";
 import { createEffect, createSignal } from "solid-js";
 import injectedCss from  "./html-export.css?raw";
 
@@ -12,7 +12,7 @@ export interface TypstDocumentProps {
 let moduleInitOptions: typst.InitOptions = {
 	beforeBuild: [],
 	getModule: () =>
-		"https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm",
+		"https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm",
 };
 
 export const TypstDocument = ({

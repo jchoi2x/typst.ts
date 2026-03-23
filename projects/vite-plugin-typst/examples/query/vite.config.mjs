@@ -1,7 +1,7 @@
 // @ts-check
 
 import { defineConfig } from 'vite';
-import { TypstPlugin, checkExecResult } from '@myriaddreamin/vite-plugin-typst';
+import { TypstPlugin, checkExecResult } from '@jchoi2x/vite-plugin-typst';
 
 export default defineConfig({
   plugins: [
@@ -25,7 +25,7 @@ export default defineConfig({
         }
 
         /**
-         * @type {import('@myriaddreamin/vite-plugin-typst/dist/compiler/node').NodeCompileProvider}
+         * @type {import('@jchoi2x/vite-plugin-typst/dist/compiler/node').NodeCompileProvider}
          */
         let _ctxType = ctx;
 

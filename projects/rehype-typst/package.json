@@ -1,9 +1,13 @@
 {
-  "name": "@myriaddreamin/rehype-typst",
+  "name": "@jchoi2x/rehype-typst",
   "version": "0.7.0",
   "description": "rehype plugin for rendering typst math equations",
   "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "sideEffects": false,
   "type": "module",
   "exports": "./index.js",
@@ -17,7 +21,7 @@
     "publish:lib": "npm publish --access public"
   },
   "dependencies": {
-    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0",
+    "@jchoi2x/typst-ts-node-compiler": "^0.7.0",
     "@types/hast": "^3.0.0",
     "@types/katex": "^0.16.0",
     "hast-util-from-html-isomorphic": "^2.0.0",

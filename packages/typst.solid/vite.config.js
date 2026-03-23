@@ -13,8 +13,8 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['solid-js', 'solid-js/web', '@myriaddreamin/typst.ts',
-        '@myriaddreamin/typst-ts-web-compiler', '@myriaddreamin/typst-ts-renderer'],
+      external: ['solid-js', 'solid-js/web', '@jchoi2x/typst.ts',
+        '@jchoi2x/typst-ts-web-compiler', '@jchoi2x/typst-ts-renderer'],
     },
   },
 })

@@ -1,9 +1,9 @@
-# `@myriaddreamin/typst.react`
+# `@jchoi2x/typst.react`
 
 ## Usage
 
 ```typescript
-import { TypstDocument } from '@myriaddreamin/typst.react';
+import { TypstDocument } from '@jchoi2x/typst.react';
 
 export const App = (artifact: Uint8Array) => {
   return (

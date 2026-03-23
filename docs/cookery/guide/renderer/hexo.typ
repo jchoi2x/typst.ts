@@ -12,7 +12,7 @@ Note: please align the version of the dependencies to same vesrion, otherwise yo
 
 ```bash
 // ensure dependencies is installed
-npm install @myriaddreamin/typst.ts @myriaddreamin/typst-ts-renderer @myriaddreamin/typst-ts-node-compiler
+npm install @jchoi2x/typst.ts @jchoi2x/typst-ts-renderer @jchoi2x/typst-ts-node-compiler
 // ensure plugin is installed
 npm install hexo-renderer-typst
 ```

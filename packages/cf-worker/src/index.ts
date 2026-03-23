@@ -1,7 +1,7 @@
-import wasmModule from '@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm';
+import wasmModule from '@jchoi2x/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm';
 
-import { createTypstCompiler } from '@myriaddreamin/typst.ts';
-import { CompileFormatEnum, type TypstCompiler } from '@myriaddreamin/typst.ts/compiler';
+import { createTypstCompiler } from '@jchoi2x/typst.ts';
+import { CompileFormatEnum, type TypstCompiler } from '@jchoi2x/typst.ts/compiler';
 
 /** Bundled wasm has no embedded fonts; preload bytes so PDF text renders in Workers. */
 const LIBERTINUS_REGULAR =
@@ -67,8 +67,8 @@ let probePromise: Promise<Record<string, unknown>> | null = null;
 async function probeTypstPackages(): Promise<Record<string, unknown>> {
   if (!probePromise) {
     probePromise = (async () => {
-      const compiler = await import('@myriaddreamin/typst-ts-web-compiler');
-      const renderer = await import('@myriaddreamin/typst-ts-renderer');
+      const compiler = await import('@jchoi2x/typst-ts-web-compiler');
+      const renderer = await import('@jchoi2x/typst-ts-renderer');
       return {
         compilerExportCount: Object.keys(compiler).length,
         rendererExportCount: Object.keys(renderer).length,
@@ -104,7 +104,7 @@ export default {
         const probe = await probeTypstPackages();
         return json({
           ok: true,
-          packages: ['@myriaddreamin/typst-ts-web-compiler', '@myriaddreamin/typst-ts-renderer'],
+          packages: ['@jchoi2x/typst-ts-web-compiler', '@jchoi2x/typst-ts-renderer'],
           probe,
           fixtureCatalog,
         });

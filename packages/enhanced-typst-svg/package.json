@@ -9,7 +9,7 @@
     "typst",
     "renderer"
   ],
-  "repository": "https://github.com/Myriad-Dreamin/typst.ts",
+  "repository": "https://github.com/jchoi2x/typst.ts",
   "files": [
     "dist/index.min.js",
     "dist/style.css"

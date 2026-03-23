@@ -1,13 +1,13 @@
 {
-  "name": "@myriaddreamin/typst-template-node-js-compiler-next",
+  "name": "@jchoi2x/typst-template-node-js-compiler-next",
   "private": true,
   "version": "1.0.0",
-  "description": "Template for Typescript+node.js using @myriaddreamin/typst-ts-node-compiler",
+  "description": "Template for Typescript+node.js using @jchoi2x/typst-ts-node-compiler",
   "module": "dist/esm/main.js",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
   "dependencies": {
-    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0"
+    "@jchoi2x/typst-ts-node-compiler": "^0.7.0"
   },
   "devDependencies": {
     "@types/node": "^20.6.3",

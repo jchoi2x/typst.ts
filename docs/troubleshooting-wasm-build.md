@@ -66,7 +66,7 @@ rustup target add wasm32-unknown-unknown
 ### Module not found: Error: Can't resolve 'env' in '...'
 
 ```
-Module not found: Error: Can't resolve 'env' in '@myriaddreamin/typst-ts-web-compiler/pkg'
+Module not found: Error: Can't resolve 'env' in '@jchoi2x/typst-ts-web-compiler/pkg'
 ```
 
 This is your cargo cache is corrupted. Please clean your cargo cache and rebuild the project.

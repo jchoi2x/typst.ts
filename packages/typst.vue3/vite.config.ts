@@ -6,13 +6,13 @@ import { resolve } from 'path';
 export const rollupOptions: RollupOptions = {
   // make sure to externalize deps that shouldn't be bundled
   // into your library
-  external: ['vue', '@myriaddreamin/typst.ts'],
+  external: ['vue', '@jchoi2x/typst.ts'],
   output: {
     // Provide global variables to use in the UMD build
     // for externalized deps
     globals: {
       vue: 'Vue',
-      '@myriaddreamin/typst.ts': 'TypstTs',
+      '@jchoi2x/typst.ts': 'TypstTs',
     },
     compact: true,
     inlineDynamicImports: true,

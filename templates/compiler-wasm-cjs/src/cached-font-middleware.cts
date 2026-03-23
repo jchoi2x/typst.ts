@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { HttpsProxyAgent } from 'https-proxy-agent';
-import { preloadFontAssets } from '@myriaddreamin/typst.ts/options.init';
+import { preloadFontAssets } from '@jchoi2x/typst.ts/options.init';
 
 export async function cachedFontInitOptions() {
   const { existsSync, mkdirSync, readFileSync, writeFileSync } = fs;

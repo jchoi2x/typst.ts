@@ -10,7 +10,7 @@
 The most simple examples always work with #snippet-lib utility library, an all-in-one library with simplified API interfaces:
 
 ```ts
-import { $typst } from '@myriaddreamin/typst.ts';
+import { $typst } from '@jchoi2x/typst.ts';
 console.log((await $typst.svg({
   mainContent: 'Hello, typst!' })).length);
 // :-> 7317
@@ -21,7 +21,7 @@ Please check #cross-link("/guide/all-in-one.typ")[All-in-one (Simplified) Librar
 Quick example for the harder way to serverless compiler:
 
 ```ts
-import { createTypstCompiler } from '@myriaddreamin/typst.ts';
+import { createTypstCompiler } from '@jchoi2x/typst.ts';
 
 const mainFilePath = '/main.typ';
 const cc /* compiler */ = createTypstCompiler();
@@ -33,7 +33,7 @@ await cc.compile({ mainFilePath });
 For #link("https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking")[_tree-shaking_], you should import it with longer path:
 
 ```ts
-import { createTypstCompiler } from '@myriaddreamin/typst.ts/compiler';
+import { createTypstCompiler } from '@jchoi2x/typst.ts/compiler';
 ```
 
 == Add or remove source/binary files

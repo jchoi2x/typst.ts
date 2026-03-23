@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "ng serve --project demo",
-    "build": "ng build --project typst.angular && cd dist/typst.angular && yarn link && cd ../../../../ && yarn link @myriaddreamin/typst.angular",
+    "build": "ng build --project typst.angular && cd dist/typst.angular && yarn link && cd ../../../../ && yarn link @jchoi2x/typst.angular",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false",
     "publish:dry": "cd dist/typst.angular && npm publish --dry-run --access public",
@@ -27,8 +27,8 @@
     "zone.js": "~0.15.0"
   },
   "peerDependencies": {
-    "@myriaddreamin/typst-ts-renderer": "^0.7.0",
-    "@myriaddreamin/typst.ts": "^0.7.0"
+    "@jchoi2x/typst-ts-renderer": "^0.7.0",
+    "@jchoi2x/typst.ts": "^0.7.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.5",
@@ -39,8 +39,8 @@
     "@angular-eslint/template-parser": "19.3.0",
     "@angular/cli": "~19.2.5",
     "@angular/compiler-cli": "^19.2.4",
-    "@myriaddreamin/typst-ts-renderer": "*",
-    "@myriaddreamin/typst.ts": "*",
+    "@jchoi2x/typst-ts-renderer": "*",
+    "@jchoi2x/typst.ts": "*",
     "@types/jasmine": "~5.1.6",
     "@types/web": "^0.0.188",
     "jasmine-core": "~5.6.0",

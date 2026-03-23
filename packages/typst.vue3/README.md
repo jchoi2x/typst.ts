@@ -5,8 +5,8 @@ This is a basic vue component for rendering typst documents.
 ## Installation
 
 ```bash
-yarn add @myriaddreamin/typst.ts
-yarn add @myriaddreamin/typst.vue3
+yarn add @jchoi2x/typst.ts
+yarn add @jchoi2x/typst.vue3
 ```
 
 ## Usage
@@ -24,18 +24,18 @@ use the component:
 Set path to wasm files:
 
 ```ts
-import { $typst } from '@myriaddreamin/typst.ts';
+import { $typst } from '@jchoi2x/typst.ts';
 
 $typst.setCompilerInitOptions({
   beforeBuild: [],
   getModule: () =>
-    'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+    'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
 });
 
 $typst.setRendererInitOptions({
   beforeBuild: [],
   getModule: () =>
-    'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+    'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
 });
 ```
 

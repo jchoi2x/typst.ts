@@ -1,4 +1,4 @@
-import type { CompileArgs, NodeHtmlOutputExecResult } from '@myriaddreamin/typst-ts-node-compiler';
+import type { CompileArgs, NodeHtmlOutputExecResult } from '@jchoi2x/typst-ts-node-compiler';
 import * as path from 'path';
 import type { ResolvedConfig, Plugin as VitePlugin } from 'vite';
 import {
@@ -16,7 +16,7 @@ import { InputChecker, ResolvedTypstInput, ResolvedTypstInputs } from './input.j
 // Constantly known compiler providers
 interface Providers {
   'typst-cli': CliCompileProvider;
-  '@myriaddreamin/typst-ts-node-compiler': NodeCompileProvider;
+  '@jchoi2x/typst-ts-node-compiler': NodeCompileProvider;
 }
 
 // Known provider kind
@@ -90,7 +90,7 @@ export interface TypstPluginOptions<K extends ProviderKind | CompileProviderCons
   extends TypstPluginOptionsBase {
   /**
    * The compiler provider, either a string for a built-in provider or a constructor for a custom provider.
-   * @default '@myriaddreamin/typst-ts-node-compiler'
+   * @default '@jchoi2x/typst-ts-node-compiler'
    */
   compiler?: K | CompileProviderConstructor;
   /**
@@ -355,7 +355,7 @@ async function createCompiler<K extends ProviderKind | CompileProviderConstructo
   options: TypstPluginOptions<K>,
 ) {
   let TCompileProvider = (
-    options.compiler === undefined || options.compiler === '@myriaddreamin/typst-ts-node-compiler'
+    options.compiler === undefined || options.compiler === '@jchoi2x/typst-ts-node-compiler'
       ? (await import('./compiler/node.js')).NodeCompileProvider
       : options.compiler === 'typst-cli'
         ? (await import('./compiler/cli.js')).CliCompileProvider

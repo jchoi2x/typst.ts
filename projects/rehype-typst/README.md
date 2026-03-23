@@ -34,7 +34,7 @@ This package is [ESM only](https://nodejs.org/api/esm.html#modules-ecmascript-mo
 In Node.js (version 16+), install with [npm](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager):
 
 ```sh
-npm install @myriaddreamin/rehype-typst
+npm install @jchoi2x/rehype-typst
 ```
 
 ## Use
@@ -54,7 +54,7 @@ Say our document `input.html` contains:
 …and our module `example.js` contains:
 
 ```js
-import rehypeTypst from '@myriaddreamin/rehype-typst'
+import rehypeTypst from '@jchoi2x/rehype-typst'
 import rehypeParse from 'rehype-parse'
 import rehypeStringify from 'rehype-stringify'
 import {read, write} from 'to-vfile'

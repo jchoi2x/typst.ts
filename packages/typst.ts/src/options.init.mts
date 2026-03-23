@@ -1,6 +1,6 @@
 // @ts-ignore
-import type * as typstRenderer from '@myriaddreamin/typst-ts-renderer';
-import type * as typstCompiler from '@myriaddreamin/typst-ts-web-compiler';
+import type * as typstRenderer from '@jchoi2x/typst-ts-renderer';
+import type * as typstCompiler from '@jchoi2x/typst-ts-web-compiler';
 import type { FsAccessModel, PackageRegistry, PackageSpec } from './internal.types.mjs';
 import type { WebAssemblyModuleRef } from './wasm.mjs';
 

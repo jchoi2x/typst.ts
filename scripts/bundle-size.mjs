@@ -11,10 +11,10 @@ const gzBundleSize = path => {
 };
 
 const typstTsRendererWasmSize = gzBundleSize(
-  '../node_modules/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+  '../node_modules/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
 );
 const typstTsWebCompilerWasmSize = gzBundleSize(
-  '../node_modules/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+  '../node_modules/@jchoi2x/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
 );
 
 const defaultFonts = [
@@ -72,7 +72,7 @@ const version = JSON.parse(
   readFileSync(
     resolve(
       import.meta.dirname,
-      '../node_modules/@myriaddreamin/typst-ts-web-compiler/package.json',
+      '../node_modules/@jchoi2x/typst-ts-web-compiler/package.json',
     ),
   ),
 ).version;

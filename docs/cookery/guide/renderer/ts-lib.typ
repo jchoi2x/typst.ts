@@ -8,16 +8,16 @@
 
 = JavaScript/TypeScript Library
 
-Use #link("https://www.npmjs.com/package/@myriaddreamin/typst.ts")[`@myriaddreamin/typst.ts`].
+Use #link("https://www.npmjs.com/package/@jchoi2x/typst.ts")[`@jchoi2x/typst.ts`].
 
-It is also runnable in node.js, but we recommend using the #cross-link("/guide/all-in-one-node.typ")[Node.js Library] whenever. Ideally, we can wrap node.js into `@myriaddreamin/typst.ts`, but we still don't have concrete idea. Please let us know if you're interested.
+It is also runnable in node.js, but we recommend using the #cross-link("/guide/all-in-one-node.typ")[Node.js Library] whenever. Ideally, we can wrap node.js into `@jchoi2x/typst.ts`, but we still don't have concrete idea. Please let us know if you're interested.
 
 == Use simplified APIs
 
 One may use simplified apis:
 
 ```typescript
-import { $typst } from '@myriaddreamin/typst.ts';
+import { $typst } from '@jchoi2x/typst.ts';
 const mainContent = 'Hello, typst!';
 
 console.log(await $typst.svg({ mainContent }));

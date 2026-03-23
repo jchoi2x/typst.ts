@@ -1,5 +1,5 @@
 {
-  "name": "@myriaddreamin/typst-ts-node-compiler-android-arm-eabi",
+  "name": "@jchoi2x/typst-ts-node-compiler-android-arm-eabi",
   "version": "0.7.0",
   "os": [
     "android"
@@ -7,7 +7,7 @@
   "cpu": [
     "arm"
   ],
-  "repository": "https://github.com/Myriad-Dreamin/typst.ts",
+  "repository": "https://github.com/jchoi2x/typst.ts",
   "main": "typst-ts-node-compiler.android-arm-eabi.node",
   "files": [
     "typst-ts-node-compiler.android-arm-eabi.node"
@@ -26,7 +26,7 @@
     "node": ">= 10"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
+    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   }
 }

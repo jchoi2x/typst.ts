@@ -3,7 +3,7 @@
 Usage:
 
 ```typescript
-import { $typst } from '@myriaddreamin/typst.ts';
+import { $typst } from '@jchoi2x/typst.ts';
 console.log(
   (
     await $typst.svg({

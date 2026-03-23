@@ -3,7 +3,7 @@ import type {
   CompileDocArgs,
   NodeTypstDocument,
   QueryDocArgs,
-} from '@myriaddreamin/typst-ts-node-compiler';
+} from '@jchoi2x/typst-ts-node-compiler';
 import { spawnSync } from 'child_process';
 import { DOMParser, XMLSerializer, Document } from '@xmldom/xmldom';
 import {

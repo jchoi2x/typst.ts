@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { TypstDocumentModule } from '@myriaddreamin/typst.angular';
+import { TypstDocumentModule } from '@jchoi2x/typst.angular';
 import { AppService } from './app.service';
 
 @NgModule({

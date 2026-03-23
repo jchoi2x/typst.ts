@@ -62,7 +62,7 @@ Using `all-in-one.bundle.js`:
 ```html
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-all-in-one.ts@0.7.0/dist/esm/index.js"
+  src="https://cdn.jsdelivr.net/npm/@jchoi2x/typst-all-in-one.ts@0.7.0/dist/esm/index.js"
   id="typst"
 >
   console.log($typst.svg({
@@ -76,18 +76,18 @@ Or `all-in-one-lite.bundle.js` which needs configure your frontend to have acces
 ```html
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
+  src="https://cdn.jsdelivr.net/npm/@jchoi2x/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
   id="typst"
 >
   /// Initializes the Typst compiler and renderer. Since we use "all-in-one-lite.bundle.js" instead of
   /// "all-in-one.bundle.js" we need to tell that the wasm module files can be loaded from CDN (jsdelivr).
   $typst.setCompilerInitOptions({
     getModule: () =>
-      'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+      'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
   });
   $typst.setRendererInitOptions({
     getModule: () =>
-      'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+      'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
   });
 
   console.log($typst.svg({
@@ -113,17 +113,17 @@ See a #link("https://github.com/Myriad-Dreamin/typst.ts/blob/main/github-pages/p
 You can also install the library from registry, npm as an example:
 
 ```bash
-npm install @myriaddreamin/typst.ts
+npm install @jchoi2x/typst.ts
 # Optional: if you want to run a typst renderer.
-npm install @myriaddreamin/typst-ts-renderer
+npm install @jchoi2x/typst-ts-renderer
 # Optional: if you want to run a typst compiler.
-npm install @myriaddreamin/typst-ts-web-compiler
+npm install @jchoi2x/typst-ts-web-compiler
 ```
 
 Then, you can import the library in your code:
 
 ```ts
-import { $typst } from '@myriaddreamin/typst.ts';
+import { $typst } from '@jchoi2x/typst.ts';
 console.log((await $typst.svg({
   mainContent: 'Hello, typst!' })).length);
 // :-> 7317
@@ -137,13 +137,13 @@ In Node.js, it reads and loads the Wasm modules from `node_modules` in the files
 As a shortcut, a global instance `$typst` is provided, and it will lazily initialize the compiler and renderer for you. Import the global instance like this:
 
 ```ts
-import { $typst } from '@myriaddreamin/typst.ts';
+import { $typst } from '@jchoi2x/typst.ts';
 ```
 
 A snippet instance will store some state for the sake of convenience, which makes it not suitable for concurrent usage. You can create a new instance using the class `TypstSnippet`:
 
 ```typescript
-import { TypstSnippet } from '@myriaddreamin/typst.ts/contrib/snippet';
+import { TypstSnippet } from '@jchoi2x/typst.ts/contrib/snippet';
 const $typst = new TypstSnippet({
   // optional renderer instance
   renderer: enableRendering ?? (() => {
@@ -276,7 +276,7 @@ $typst.use(
 The most simple examples always work with #snippet-lib utility library, an all-in-one library with simplified API interfaces:
 
 ```ts
-import { $typst } from '@myriaddreamin/typst.ts/dist/esm/contrib/snippet.mjs';
+import { $typst } from '@jchoi2x/typst.ts/dist/esm/contrib/snippet.mjs';
 console.log((await $typst.svg({
   mainContent: 'Hello, typst!' })).length);
 // :-> 7317
@@ -288,7 +288,7 @@ Note: If your script targets to *CommonJS*, you should import it in *CommonJS* p
 
 ```ts
 const { createTypstCompiler } = require(
-  '@myriaddreamin/typst.ts/dist/cjs/compiler.cjs');
+  '@jchoi2x/typst.ts/dist/cjs/compiler.cjs');
 ```
 
 == Examples
@@ -298,7 +298,7 @@ Here are some examples for the #snippet-lib utility library.
 === Example: Use the _global shared_ compiler instance:
 
 ```typescript
-import { $typst } from '@myriaddreamin/typst.ts/dist/esm/contrib/snippet.mjs';
+import { $typst } from '@jchoi2x/typst.ts/dist/esm/contrib/snippet.mjs';
 ```
 
 === Example: Create an instance of the utility class:

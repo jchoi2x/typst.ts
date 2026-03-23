@@ -1,11 +1,11 @@
-import { createTypstCompiler, createTypstRenderer } from '@myriaddreamin/typst.ts';
-import { MemoryAccessModel } from '@myriaddreamin/typst.ts/fs/memory';
-import { NodeFetchPackageRegistry } from '@myriaddreamin/typst.ts/fs/package.node';
-import { withAccessModel, withPackageRegistry } from '@myriaddreamin/typst.ts/options.init';
+import { createTypstCompiler, createTypstRenderer } from '@jchoi2x/typst.ts';
+import { MemoryAccessModel } from '@jchoi2x/typst.ts/fs/memory';
+import { NodeFetchPackageRegistry } from '@jchoi2x/typst.ts/fs/package.node';
+import { withAccessModel, withPackageRegistry } from '@jchoi2x/typst.ts/options.init';
 import { cachedFontInitOptions } from './cached-font-middleware.cjs';
 import { writeFileSync } from 'fs';
 import request, { HttpVerb, Options } from 'sync-request';
-import { CompileFormatEnum } from '@myriaddreamin/typst.ts/compiler';
+import { CompileFormatEnum } from '@jchoi2x/typst.ts/compiler';
 // import request, { HttpVerb, Options } from 'sync-request-curl';
 
 async function main(coordinate: { x: number; y: number }) {

@@ -4,6 +4,6 @@
 
 = Compiler Service
 
-Use `@myriaddreamin/typst.vue3`
+Use `@jchoi2x/typst.vue3`
 
 Coming soon.

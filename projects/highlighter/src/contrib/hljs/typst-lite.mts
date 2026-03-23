@@ -1,4 +1,4 @@
-import typstInit from '@myriaddreamin/typst-ts-parser/pkg/wasm-pack-shim.mjs';
+import typstInit from '@jchoi2x/typst-ts-parser/pkg/wasm-pack-shim.mjs';
 import { hljsTypst, initHljs } from '../../hljs.mjs';
 
 type ModuleSource = 'local' | 'jsdelivr';
@@ -16,11 +16,11 @@ type WebAssemblyModuleRef = RequestInfo | URL | Response | BufferSource | WebAss
 
 /// Begin of Retrieve Wasm Modules from somewhere
 /// We need a compiler module and a parser module
-/// - `@myriaddreamin/typst-ts-parser`
+/// - `@jchoi2x/typst-ts-parser`
 
 // Bundle
 // @ts-ignore
-// import parser from '@myriaddreamin/typst-ts-parser/pkg/typst_ts_parser_bg.wasm?url';
+// import parser from '@jchoi2x/typst-ts-parser/pkg/typst_ts_parser_bg.wasm?url';
 
 let moduleSource: ModuleSource = (window.$typst$parserModuleSource || 'jsdelivr') as any;
 
@@ -39,12 +39,12 @@ switch (moduleSource) {
   case undefined:
   case 'jsdelivr':
     parserModule = fetch(
-      'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-parser/pkg/typst_ts_parser_bg.wasm',
+      'https://cdn.jsdelivr.net/npm/@jchoi2x/typst-ts-parser/pkg/typst_ts_parser_bg.wasm',
     );
     break;
   case 'local':
     parserModule = fetch(
-      'http://127.0.0.1:20810/base/node_modules/@myriaddreamin/typst-ts-parser/pkg/typst_ts_parser_bg.wasm',
+      'http://127.0.0.1:20810/base/node_modules/@jchoi2x/typst-ts-parser/pkg/typst_ts_parser_bg.wasm',
     );
     break;
 }

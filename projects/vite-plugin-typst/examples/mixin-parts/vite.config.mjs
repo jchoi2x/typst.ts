@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { TypstPlugin, checkExecResult } from '@myriaddreamin/vite-plugin-typst';
+import { TypstPlugin, checkExecResult } from '@jchoi2x/vite-plugin-typst';
 
 export default defineConfig({
   plugins: [

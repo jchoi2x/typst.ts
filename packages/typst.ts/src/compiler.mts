@@ -1,5 +1,5 @@
 // @ts-ignore
-import type * as typst from '@myriaddreamin/typst-ts-web-compiler';
+import type * as typst from '@jchoi2x/typst-ts-web-compiler';
 import { buildComponent } from './init.mjs';
 import { SemanticTokens, SemanticTokensLegend, kObject } from './internal.types.mjs';
 
@@ -471,7 +471,7 @@ export class TypstFontBuilderDriver implements TypstFontBuilder {
   private fontBuilder: typst.TypstFontResolverBuilder;
 
   async init(options?: Partial<InitOptions>): Promise<void> {
-    this.fontBuilderJs = await (options?.getWrapper?.() || import('@myriaddreamin/typst-ts-web-compiler'));
+    this.fontBuilderJs = await (options?.getWrapper?.() || import('@jchoi2x/typst-ts-web-compiler'));
     /// init typst wasm module
     await gCompilerModule(this.fontBuilderJs).init(options?.getModule?.());
 
@@ -508,7 +508,7 @@ class TypstCompilerDriver implements TypstCompiler {
   constructor() { }
 
   async init(options?: Partial<InitOptions>): Promise<void> {
-    this.compilerJs = await (options?.getWrapper?.() || import('@myriaddreamin/typst-ts-web-compiler'));
+    this.compilerJs = await (options?.getWrapper?.() || import('@jchoi2x/typst-ts-web-compiler'));
     const TypstCompilerBuilder = this.compilerJs.TypstCompilerBuilder;
 
     const compilerOptions = { ...(options || {}) };

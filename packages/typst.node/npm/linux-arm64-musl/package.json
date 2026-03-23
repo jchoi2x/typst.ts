@@ -1,5 +1,5 @@
 {
-  "name": "@myriaddreamin/typst-ts-node-compiler-linux-arm64-musl",
+  "name": "@jchoi2x/typst-ts-node-compiler-linux-arm64-musl",
   "version": "0.7.0",
   "os": [
     "linux"
@@ -10,7 +10,7 @@
   "libc": [
     "musl"
   ],
-  "repository": "https://github.com/Myriad-Dreamin/typst.ts",
+  "repository": "https://github.com/jchoi2x/typst.ts",
   "main": "typst-ts-node-compiler.linux-arm64-musl.node",
   "files": [
     "typst-ts-node-compiler.linux-arm64-musl.node"
@@ -29,7 +29,7 @@
     "node": ">= 10"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
+    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   }
 }

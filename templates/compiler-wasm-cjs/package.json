@@ -1,15 +1,15 @@
 {
-  "name": "@myriaddreamin/typst-template-compiler-wasm-cjs",
+  "name": "@jchoi2x/typst-template-compiler-wasm-cjs",
   "private": true,
   "version": "1.0.0",
-  "description": "Template for run typst compiler using @myriaddreamin/typst.ts and @myriaddreamin/typst-ts-web-compiler",
+  "description": "Template for run typst compiler using @jchoi2x/typst.ts and @jchoi2x/typst-ts-web-compiler",
   "module": "dist/cjs/main.js",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
   "dependencies": {
-    "@myriaddreamin/typst-ts-renderer": "^0.7.0",
-    "@myriaddreamin/typst-ts-web-compiler": "^0.7.0",
-    "@myriaddreamin/typst.ts": "^0.7.0",
+    "@jchoi2x/typst-ts-renderer": "^0.7.0",
+    "@jchoi2x/typst-ts-web-compiler": "^0.7.0",
+    "@jchoi2x/typst.ts": "^0.7.0",
     "node-fetch": "3.3.2",
     "sync-request": "^6.1.0"
   },

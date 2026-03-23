@@ -1,11 +1,11 @@
 {
-  "name": "@myriaddreamin/typst-ts-node-compiler",
+  "name": "@jchoi2x/typst-ts-node-compiler",
   "version": "0.7.0",
   "author": "Myriad-Dreamin",
   "description": "Compile or Render Typst documents in Node environment.",
   "main": "index.js",
   "license": "Apache-2.0",
-  "repository": "https://github.com/Myriad-Dreamin/typst.ts",
+  "repository": "https://github.com/jchoi2x/typst.ts",
   "keywords": [
     "typst",
     "compiler",
@@ -43,7 +43,7 @@
     "node": ">= 10"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
+    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   },
   "scripts": {

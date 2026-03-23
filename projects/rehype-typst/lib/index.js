@@ -6,7 +6,7 @@
 
 import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic';
 import { toText } from 'hast-util-to-text';
-import { NodeCompiler } from '@myriaddreamin/typst-ts-node-compiler';
+import { NodeCompiler } from '@jchoi2x/typst-ts-node-compiler';
 import { SKIP, visitParents } from 'unist-util-visit-parents';
 /** @type {Readonly<Options>} */
 const emptyOptions = {};
