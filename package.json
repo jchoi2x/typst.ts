@@ -14,6 +14,7 @@
   "workspaces": [
     "packages/parser",
     "packages/compiler",
+    "packages/cf-worker",
     "packages/renderer",
     "packages/typst.ts",
     "packages/typst.node",
@@ -37,6 +38,7 @@
     "install:pure": "yarn install --pure-lockfile",
     "build:core": "yarn workspace @myriaddreamin/typst.ts build",
     "build:pkg": "turbo build --filter=./packages/*",
+    "start:cf-worker": "yarn workspace @myriaddreamin/typst-cf-worker dev",
     "build:renderer": "turbo build --filter=!./packages/{compiler} --filter=./packages/{renderer,typst.ts}",
     "build:proj": "turbo build --filter=./projects/*",
     "build:test": "turbo test test:e2e --filter=./packages/*",
@@ -90,5 +92,6 @@
     "vite": "^6.2.3",
     "vite-plugin-banner": "^0.8.0",
     "vitest": "4.0.0-beta.16"
-  }
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }

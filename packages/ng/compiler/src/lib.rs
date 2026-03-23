@@ -56,20 +56,40 @@ impl TypstCompiler {
     /// Creates a new instance of the TypstCompiler.
     #[wasm_bindgen(constructor)]
     pub fn new() -> Self {
+      let mtime_fn = Closure::<dyn Fn() -> i32>::new(|| 0)
+        .into_js_value()
+        .unchecked_into::<js_sys::Function>();
+
+        let is_file_fn = Closure::<dyn Fn() -> bool>::new(|| true)
+            .into_js_value()
+            .unchecked_into::<js_sys::Function>();
+
+        let real_path_fn = Closure::<dyn Fn(JsValue) -> JsValue>::new(|path| path)
+            .into_js_value()
+            .unchecked_into::<js_sys::Function>();
+
+        let read_all_fn = Closure::<dyn Fn()>::new(|| {
+            wasm_bindgen::throw_str("Dummy AccessModel, please initialize compiler with withAccessModel()");
+        })
+        .into_js_value()
+        .unchecked_into::<js_sys::Function>();
+
+        let real_resolve_fn = Closure::<dyn Fn()>::new(|| {
+            wasm_bindgen::throw_str("Dummy Registry, please initialize compiler with withPackageRegistry()");
+        })
+        .into_js_value()
+        .unchecked_into::<js_sys::Function>();
+
         let am = ProxyAccessModel {
             context: wasm_bindgen::JsValue::UNDEFINED,
-            mtime_fn: js_sys::Function::new_no_args("return 0"),
-            is_file_fn: js_sys::Function::new_no_args("return true"),
-            real_path_fn: js_sys::Function::new_with_args("path", "return path"),
-            read_all_fn: js_sys::Function::new_no_args(
-                "throw new Error('Dummy AccessModel, please initialize compiler with withAccessModel()')",
-            ),
+            mtime_fn,
+            is_file_fn,
+            real_path_fn,
+            read_all_fn,
         };
         let registry = JsRegistry {
             context: ProxyContext::new(wasm_bindgen::JsValue::UNDEFINED),
-            real_resolve_fn: js_sys::Function::new_no_args(
-                "throw new Error('Dummy Registry, please initialize compiler with withPackageRegistry()')",
-            ),
+            real_resolve_fn,
         };
         let fonts = BrowserFontSearcher::default().build();
 
