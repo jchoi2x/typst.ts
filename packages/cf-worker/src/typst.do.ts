@@ -11,6 +11,8 @@ import { parseMissingFontFamilies } from "./lib/parse-missing-font-families";
 import { parseMissingPreviewPackages } from './lib/parse-missing-preview-packages';
 import SAMPLE_TYP  from './sample_type.typ';
 import { Hono } from 'hono';
+import { getFontFamilyMapping, normalizeFamilyName } from './lib/normalize-font-family-name';
+import { prioritizeFontFile } from './lib/prioritize-font-file';
 
 /** Bundled wasm has no embedded fonts; preload bytes so PDF text renders in Workers. */
 const LIBERTINUS_REGULAR =
@@ -49,52 +51,29 @@ export class TypstCompilerDO extends DurableObject<Env> {
     this.loadDefaultFontFamilyMap();
     this.loadFontMapFromEnv();
   }
+
   private initServer(): void {
     this.app.get('/compile-pdf', async (c) => {
       try {
-        return await this.compilePdfResponse();
+        return await this.compilePdfResponse(10, SAMPLE_TYP);
       } catch (error) {
+        console.error('Error compiling PDF:', error);
         const message = error instanceof Error ? error.message : String(error);
         return c.json({ ok: false, error: message }, { status: 500 });
       }
     });
   }
 
-  private normalizeFamilyName(name: string): string {
-    return name.trim().toLowerCase().replace(/\s+/g, ' ');
-  }
 
   private setFontFamilyMapping(name: string, urls: string[]): void {
-    const normalized = this.normalizeFamilyName(name);
-    const filtered = urls.filter(url => url.trim().length > 0);
-    if (filtered.length === 0) {
-      return;
+    const { normalized, filtered } = getFontFamilyMapping(name, urls);
+    if (filtered && !filtered.length) {
+      this.fontFamilyUrlMap.set(normalized, filtered);
     }
-    this.fontFamilyUrlMap.set(normalized, filtered);
-  }
-
-  private prioritizeFontFile(name: string): number {
-    const n = name.toLowerCase();
-    if (n.includes('regular') || n.includes('-400') || n.includes('roman')) {
-      return 0;
-    }
-    if (n.includes('variable')) {
-      return 1;
-    }
-    if (n.includes('book')) {
-      return 2;
-    }
-    if (n.includes('bold') || n.includes('semibold')) {
-      return 3;
-    }
-    if (n.includes('italic') || n.includes('oblique')) {
-      return 4;
-    }
-    return 10;
   }
 
   private mapFamilyToRenderCvDir(family: string): string {
-    const normalized = this.normalizeFamilyName(family);
+    const normalized = normalizeFamilyName(family);
     if (normalized.startsWith('font awesome 7')) {
       return 'Font Awesome 7';
     }
@@ -114,12 +93,12 @@ export class TypstCompilerDO extends DurableObject<Env> {
         if (!res.ok) {
           return result;
         }
-        const entries = (await res.json()) as Array<{ type?: string; name?: string }>;
+        const entries = await res.json<Array<{ type?: string; name?: string }>>();
         for (const entry of entries) {
           if (entry.type !== 'dir' || !entry.name) {
             continue;
           }
-          result.set(this.normalizeFamilyName(entry.name), entry.name);
+          result.set(normalizeFamilyName(entry.name), entry.name);
         }
         return result;
       })();
@@ -128,14 +107,14 @@ export class TypstCompilerDO extends DurableObject<Env> {
   }
 
   private async fetchRenderCvFontUrls(family: string): Promise<string[]> {
-    const normalized = this.normalizeFamilyName(family);
+    const normalized = normalizeFamilyName(family);
     if (this.renderCvFamilyUrlCache.has(normalized)) {
       return this.renderCvFamilyUrlCache.get(normalized) ?? [];
     }
 
     const dirMap = await this.getRenderCvDirMap();
     const requestedDir = this.mapFamilyToRenderCvDir(family);
-    const resolvedDir = dirMap.get(this.normalizeFamilyName(requestedDir)) ?? requestedDir;
+    const resolvedDir = dirMap.get(normalizeFamilyName(requestedDir)) ?? requestedDir;
     const endpoint = `${RENDERCV_FONTS_API_BASE}/${encodeURIComponent(resolvedDir)}`;
     try {
       const res = await fetch(endpoint, {
@@ -158,7 +137,7 @@ export class TypstCompilerDO extends DurableObject<Env> {
       let candidates = files
         .filter(f => f.type === 'file' && !!f.name && !!f.download_url)
         .filter(f => /\.(ttf|otf)$/i.test(f.name!))
-        .sort((a, b) => this.prioritizeFontFile(a.name!) - this.prioritizeFontFile(b.name!));
+        .sort((a, b) => prioritizeFontFile(a.name!) - prioritizeFontFile(b.name!));
 
       // Select matching variants for Font Awesome families.
       if (normalized.includes('font awesome 7')) {
@@ -256,7 +235,7 @@ export class TypstCompilerDO extends DurableObject<Env> {
   private async resolveDynamicFontUrls(families: string[]): Promise<string[]> {
     const discovered = new Set<string>();
     for (const family of families) {
-      const mapped = this.fontFamilyUrlMap.get(this.normalizeFamilyName(family));
+      const mapped = this.fontFamilyUrlMap.get(normalizeFamilyName(family));
       if (mapped) {
         for (const url of mapped) {
           discovered.add(url);
@@ -272,7 +251,7 @@ export class TypstCompilerDO extends DurableObject<Env> {
     return [...discovered.values()];
   }
 
-  private async getCompilerRuntime(): Promise<CompilerRuntime> {
+  private async getCompilerRuntime(sample_type: string): Promise<CompilerRuntime> {
     if (!this.compilerPromise) {
       this.compilerPromise = (async () => {
         const [regular, bold] = await this.fontBytesPromise;
@@ -303,7 +282,7 @@ export class TypstCompilerDO extends DurableObject<Env> {
         const compiler = createTypstCompiler();
         const accessModel = new MemoryAccessModel();
         const packageRegistry = new WorkerPackageRegistry(accessModel);
-        await packageRegistry.preloadFromSource(SAMPLE_TYP);
+        await packageRegistry.preloadFromSource(sample_type);
         const extraSpecs = [...this.extraPreloadPackages.values()];
         if (extraSpecs.length > 0) {
           console.log(
@@ -320,22 +299,27 @@ export class TypstCompilerDO extends DurableObject<Env> {
             withPackageRegistry(packageRegistry as any),
           ],
         });
-        compiler.addSource('/main.typ', SAMPLE_TYP);
+        compiler.addSource('/main.typ', sample_type);
         return { compiler, packageRegistry };
       })();
     }
     return this.compilerPromise;
   }
 
-  private async compilePdfResponse(): Promise<Response> {
-    let runtime = await this.getCompilerRuntime();
+  private async compilePdfResponse(n: number, sample_type: string): Promise<Response> {
+
+    let runtime = await this.getCompilerRuntime(sample_type);
+
+    // let it compile
     let out = await runtime.compiler.compile({
       mainFilePath: '/main.typ',
       format: CompileFormatEnum.pdf,
       diagnostics: 'full',
     });
 
-    for (let i = 0; i < 5 && !out.result; i++) {
+
+    // resolve failures for missing fonts and shit like that and repeat up to n number of times
+    for (let i = 0; i < n && !out.result; i++) {
       const missingPackages = parseMissingPreviewPackages(out.diagnostics as unknown[] | undefined);
       const missingFamilies = parseMissingFontFamilies(out.diagnostics as unknown[] | undefined);
 
@@ -374,7 +358,7 @@ export class TypstCompilerDO extends DurableObject<Env> {
 
       // Recreate compiler so package resolution retries with expanded registry preload.
       this.compilerPromise = null;
-      runtime = await this.getCompilerRuntime();
+      runtime = await this.getCompilerRuntime(sample_type);
       out = await runtime.compiler.compile({
         mainFilePath: '/main.typ',
         format: CompileFormatEnum.pdf,
@@ -393,7 +377,7 @@ export class TypstCompilerDO extends DurableObject<Env> {
       );
     }
 
-    return new Response(out.result, {
+    return new Response(out.result as BodyInit, {
       status: 200,
       headers: {
         'content-type': 'application/pdf',
