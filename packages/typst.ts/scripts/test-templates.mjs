@@ -3,8 +3,8 @@ import { readdirSync } from 'fs';
 import { join } from 'path';
 import { execSync } from 'child_process';
 
-function yarn(cwd, command) {
-  return execSync(`yarn ${command}`, {
+function bun(cwd, command) {
+  return execSync(`bun run ${command}`, {
     shell: true,
     cwd,
     stdio: 'inherit',
@@ -28,8 +28,8 @@ function main() {
   for (const [templateName] of templates) {
     const templateDir = join(templateRoot, templateName);
     console.log(`start testing ${templateDir}`);
-    yarn(templateDir, 'build');
-    yarn(templateDir, 'test');
+    bun(templateDir, 'build');
+    bun(templateDir, 'test');
   }
 }
 

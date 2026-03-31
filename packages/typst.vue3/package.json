@@ -27,13 +27,13 @@
   "scripts": {
     "dev": "vite -c vite.config.dev.ts",
     "build:types": "vue-tsc -p tsconfig.type.json",
-    "build": "vite build && yarn build:types",
+    "build": "vite build && bun run build:types",
     "publish:dry": "npm publish --dry-run --access public",
     "publish:lib": "npm publish --access public || exit 0"
   },
   "dependencies": {
-    "@jchoi2x/typst-ts-renderer": "0.7.0",
-    "@jchoi2x/typst.ts": "0.7.0"
+    "@jchoi2x/typst-ts-renderer": "workspace:*",
+    "@jchoi2x/typst.ts": "workspace:*"
   },
   "peerDependencies": {
     "vue": "^3.4.31"

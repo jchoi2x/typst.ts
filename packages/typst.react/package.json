@@ -49,8 +49,8 @@
     "react-dom": "^17.0.1 || ^18.x || ^19.x"
   },
   "devDependencies": {
-    "@jchoi2x/typst-ts-renderer": "*",
-    "@jchoi2x/typst.ts": "*",
+    "@jchoi2x/typst-ts-renderer": "workspace:*",
+    "@jchoi2x/typst.ts": "workspace:*",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "react": "^19.x",

@@ -35,8 +35,8 @@
     "@jchoi2x/typst-ts-parser": "^0.7.0"
   },
   "devDependencies": {
-    "@jchoi2x/typst.ts": "*",
-    "@jchoi2x/typst-ts-parser": "*",
+    "@jchoi2x/typst.ts": "workspace:*",
+    "@jchoi2x/typst-ts-parser": "workspace:*",
     "vite": "^6.2.3",
     "vitest": "^3.0.9"
   },

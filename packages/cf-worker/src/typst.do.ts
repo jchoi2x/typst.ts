@@ -10,6 +10,7 @@ import { fetchFontBytes } from "./lib/fetch-font-bytes";
 import { parseMissingFontFamilies } from "./lib/parse-missing-font-families";
 import { parseMissingPreviewPackages } from './lib/parse-missing-preview-packages';
 import SAMPLE_TYP  from './sample_type.typ';
+import { Hono } from 'hono';
 
 /** Bundled wasm has no embedded fonts; preload bytes so PDF text renders in Workers. */
 const LIBERTINUS_REGULAR =
@@ -36,15 +37,27 @@ export class TypstCompilerDO extends DurableObject<Env> {
   private readonly renderCvFamilyUrlCache = new Map<string, string[]>();
   private renderCvDirMapPromise: Promise<Map<string, string>> | null = null;
   private readonly fontBytesPromise: Promise<[Uint8Array, Uint8Array]>;
+  private readonly app = new Hono<{ Bindings: Env }>();
 
   constructor(ctx: DurableObjectState, env: Env) {
     super(ctx, env);
+    this.initServer();
     this.fontBytesPromise = Promise.all([
       fetchFontBytes(LIBERTINUS_REGULAR),
       fetchFontBytes(LIBERTINUS_BOLD),
     ]);
     this.loadDefaultFontFamilyMap();
     this.loadFontMapFromEnv();
+  }
+  private initServer(): void {
+    this.app.get('/compile-pdf', async (c) => {
+      try {
+        return await this.compilePdfResponse();
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        return c.json({ ok: false, error: message }, { status: 500 });
+      }
+    });
   }
 
   private normalizeFamilyName(name: string): string {
@@ -391,15 +404,6 @@ export class TypstCompilerDO extends DurableObject<Env> {
   }
 
   async fetch(request: Request): Promise<Response> {
-    const url = new URL(request.url);
-    if (url.pathname === '/compile-pdf') {
-      try {
-        return await this.compilePdfResponse();
-      } catch (error) {
-        const message = error instanceof Error ? error.message : String(error);
-        return Response.json({ ok: false, error: message }, { status: 500 });
-      }
-    }
-    return Response.json({ ok: false, error: 'Not Found' }, { status: 404 });
+    return this.app.fetch(request);
   }
 }

@@ -3,6 +3,6 @@
 ```shell
 # Install ts-node globally if you haven't already
 npm install -g ts-node
-yarn install
+bun install
 ts-node ./src/main.ts
 ```

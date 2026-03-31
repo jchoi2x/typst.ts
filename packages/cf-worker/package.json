@@ -9,9 +9,10 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "@jchoi2x/typst-ts-renderer": "0.7.0",
-    "@jchoi2x/typst-ts-web-compiler": "0.7.2",
-    "@jchoi2x/typst.ts": "*"
+    "@jchoi2x/typst-ts-renderer": "workspace:*",
+    "@jchoi2x/typst-ts-web-compiler": "workspace:*",
+    "@jchoi2x/typst.ts": "workspace:*",
+    "hono": "^4.12.9"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4",

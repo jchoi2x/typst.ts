@@ -42,12 +42,12 @@
         "dist/**/index.js"
     ],
     "scripts": {
-        "build": "cd ../typst.ts && yarn build && node scripts/cp-all-in-one.mjs",
+        "build": "bun --cwd ../typst.ts run build && node scripts/cp-all-in-one.mjs",
         "prepublish": "turbo build",
         "publish:dry": "npm publish --dry-run --access public",
         "publish:lib": "npm publish --access public || exit 0"
     },
     "devDependencies": {
-        "@jchoi2x/typst.ts": "*"
+        "@jchoi2x/typst.ts": "workspace:*"
     }
 }

@@ -10,8 +10,8 @@ Cloudflare Worker package that imports both Typst wasm npm packages:
 From repo root:
 
 ```bash
-yarn install --pure-lockfile
-yarn workspace @jchoi2x/typst-cf-worker dev
+bun install --frozen-lockfile
+bun --cwd packages/cf-worker run dev
 ```
 
 Probe routes:

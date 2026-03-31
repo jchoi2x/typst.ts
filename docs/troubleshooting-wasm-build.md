@@ -46,7 +46,7 @@ Uncaught (in promise) LinkError: WebAssembly.instantiate(): Import #122 module="
 
 It may be due to inconsistency between `packages/typst.ts` and Wasm modules you are using. Please also rebuild the js library `packages/typst.ts` to ensure consistency between `packages/typst.ts` and Wasm modules.
 
-Note: the correct build command is `cd packages/typst.ts && yarn run build` instead of build renderer or compiler module individually.
+Note: the correct build command is `cd packages/typst.ts && bun run build` instead of build renderer or compiler module individually.
 
 ### Component download failed for rust-std-wasm32-unknown-unknown: could not rename downloaded file
 

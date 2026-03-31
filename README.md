@@ -216,7 +216,7 @@ You can also load the all-in-one bundle file and wasm modules from [jsdelivr](ht
 
 ### Develop projects along with a local built typst.ts
 
-You can put your owned projects under the `projects` folder, and that yarn workspace will
+You can put your owned projects under the `projects` folder, and that Bun workspace will
 automatically identify your project. We recommend you to use [git](https://git-scm.com/), [Yarn](https://yarnpkg.com/), and
 [turbo](https://turbo.build/) to manage your projects.
 
@@ -237,7 +237,7 @@ source](#build-from-source-and-check), you can build and run the project by
 
 ```shell
 # install dependencies for project
-yarn install --pure-lockfile
+bun install --frozen-lockfile
 # build typst-preview and its dependencies
 turbo build --filter=typst-preview
 @jchoi2x/typst-ts-renderer:build: cache hit, replaying logs bc0a0b151bd8eb6d
@@ -262,16 +262,16 @@ Note: see [Troubleshooting WASM Build](docs/troubleshooting-wasm-build.md) for (
 
 ```shell
 # Install and build the renderer
-$ yarn install && yarn build:pkg
+$ bun install && bun run build:pkg
 # Build the example artifacts
-$ yarn corpus
+$ bun run corpus
 # Run development server
-$ yarn dev
+$ bun run dev
 ```
 
 And open `http://127.0.0.1:20810` in your browser.
 
-You can also run `yarn run build:core` instead of `yarn run build:pkg` to build
+You can also run `bun run build:core` instead of `bun run build:pkg` to build
 core library (`@jchoi2x/typst.ts`) and avoid building the WASM modules from source.
 
 <!-- ### Example: generate documentation site for packages developers.
@@ -286,8 +286,8 @@ To develop typst.ts with its Wasm renderer, you can run the following command:
 
 ```bash
 cargo run --bin typst-ts-dev-server -- watch renderer
-# or run with yarn script
-yarn watch:renderer
+# or run with bun script
+bun run watch:renderer
 ```
 
 And open your browser to `http://localhost:20810/`.

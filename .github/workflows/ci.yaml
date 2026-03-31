@@ -39,12 +39,13 @@ jobs:
           target: wasm32-unknown-unknown
       - name: Install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | bash
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Install packages
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
+        run: bun install --frozen-lockfile
       - name: Install Playwright
-        run: yarn playwright install
+        run: bunx playwright install
       - name: Fmt check
         run: cargo fmt --check --all
       # todo: https://github.com/typst/typst/pull/2767
@@ -58,16 +59,16 @@ jobs:
           cargo build --profile dist --bin typst-ts-dev-server
       - name: Build Typescript packages
         run: |
-          yarn run build:pkg
+          bun run build:pkg
       - name: Prepare artifacts
-        run: yarn run corpus
+        run: bun run corpus
       - name: Test
         run: |
           cargo test --profile dist --no-fail-fast \
             -p reflexo-typst -p typst-ts-cli
       - name: Test Browser
         # todo: other package tests
-        run: cd packages/typst.ts && yarn test
+        run: bun --cwd packages/typst.ts run test
       - name: Archive Test Results (WebAssembly Renderer in Chrome)
         if: always()
         uses: actions/upload-artifact@v4

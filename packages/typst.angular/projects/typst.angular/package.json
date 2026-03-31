@@ -13,7 +13,7 @@
     "Typst"
   ],
   "scripts": {
-    "link:local": "cd ../../dist/typst.angular && yarn link && npm link"
+    "link:local": "cd ../../dist/typst.angular && bun link && npm link"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -325,20 +325,20 @@
     "!dist/**/all-in-one.bundle.js"
   ],
   "scripts": {
-    "build-template": "npx vite build -c vite.config.mjs --",
-    "build:main": "yarn build-template --component=main",
-    "build:bundle": "yarn build:main && yarn build-template --component=global-compiler && yarn build-template --component=global-renderer && yarn build-template --component=all-in-one && yarn build-template --component=all-in-one-lite",
-    "build": "node scripts/mkdir.mjs && tsc -p ./tsconfig.lib.json && tsc -p ./tsconfig.cjs.json && node scripts/transform.mjs && yarn build:bundle",
-    "build:dev": "node scripts/mkdir.mjs && tsc -p ./tsconfig.lib.json && npx vite build --watch -c vite.config.mjs -- --component=main",
+    "build-template": "bunx vite build -c vite.config.mjs --",
+    "build:main": "bun run build-template --component=main",
+    "build:bundle": "bun run build:main && bun run build-template --component=global-compiler && bun run build-template --component=global-renderer && bun run build-template --component=all-in-one && bun run build-template --component=all-in-one-lite",
+    "build": "node scripts/mkdir.mjs && tsc -p ./tsconfig.lib.json && tsc -p ./tsconfig.cjs.json && node scripts/transform.mjs && bun run build:bundle",
+    "build:dev": "node scripts/mkdir.mjs && tsc -p ./tsconfig.lib.json && bunx vite build --watch -c vite.config.mjs -- --component=main",
     "dev:tsc": "node scripts/mkdir.mjs && tsc -w -p ./tsconfig.lib.json",
-    "dev:main": "node scripts/mkdir.mjs && npx vite build --watch -c vite.config.mjs -- --component=main",
+    "dev:main": "node scripts/mkdir.mjs && bunx vite build --watch -c vite.config.mjs -- --component=main",
     "prepublish": "turbo build",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "test:e2e": "node scripts/test-templates.mjs && node scripts/test-imports.mjs",
     "publish:dry": "npm publish --dry-run --access public",
     "publish:lib": "npm publish --access public || exit 0",
-    "test-install": "yarn playwright install-deps && yarn playwright install"
+    "test-install": "bunx playwright install-deps && bunx playwright install"
   },
   "dependencies": {
     "idb": "^7.1.1"
@@ -356,8 +356,8 @@
     }
   },
   "devDependencies": {
-    "@jchoi2x/typst-ts-renderer": "*",
-    "@jchoi2x/typst-ts-web-compiler": "*",
+    "@jchoi2x/typst-ts-renderer": "workspace:*",
+    "@jchoi2x/typst-ts-web-compiler": "workspace:*",
     "@types/web": "^0.0.188",
     "builtin-modules": "3.3.0",
     "resolve.exports": "2.0.3",

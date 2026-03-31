@@ -1,6 +1,6 @@
 # Build
-pwsh -Command { Set-Location projects/highlighter && yarn build }
-pwsh -Command { Set-Location projects/vite-plugin-typst && yarn build }
+pwsh -Command { Set-Location projects/highlighter && bun run build }
+pwsh -Command { Set-Location projects/vite-plugin-typst && bun run build }
 pwsh -Command { Set-Location projects/rustdoc-typst-demo && cargo publish --dry-run }
 # Release
 pwsh -Command { Set-Location projects/hexo-renderer-typst && npm publish }

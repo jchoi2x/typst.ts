@@ -5,8 +5,8 @@ This is a basic vue component for rendering typst documents.
 ## Installation
 
 ```bash
-yarn add @jchoi2x/typst.ts
-yarn add @jchoi2x/typst.vue3
+bun add @jchoi2x/typst.ts
+bun add @jchoi2x/typst.vue3
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ Run the example project:
 
 ```bash
 # At the root of the project, run the typst-ts-dev-server, serving local wasm files.
-yarn dev
+bun run dev
 # In another terminal, run the example project.
-cd packages/typst.vue3 && yarn dev
+cd packages/typst.vue3 && bun run dev
 ```

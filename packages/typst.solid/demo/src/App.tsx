@@ -1,6 +1,6 @@
 import type { Component } from 'solid-js';
 import { createResource, Show } from 'solid-js'
-import { TypstDocument } from 'typst-ts-solid';
+import { TypstDocument } from '@jchoi2x/typst.solid';
 
 export const App = (artifact: Uint8Array) => {
   const getArtifactData = async () => {
