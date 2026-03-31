@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst.ts",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "description": "Run Typst in JavaScriptWorld.",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
@@ -199,6 +199,16 @@
         "default": "./dist/esm/fs/package.node.mjs"
       }
     },
+    "./fs/package.worker": {
+      "require": {
+        "types": "./dist/cjs/fs/package.worker.d.cts",
+        "default": "./dist/cjs/fs/package.worker.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/fs/package.worker.d.mts",
+        "default": "./dist/esm/fs/package.worker.mjs"
+      }
+    },
     "./index": {
       "require": {
         "types": "./dist/cjs/index.d.cts",
@@ -335,7 +345,7 @@
   },
   "peerDependencies": {
     "@jchoi2x/typst-ts-renderer": "^0.7.0",
-    "@jchoi2x/typst-ts-web-compiler": "^0.7.0"
+    "@jchoi2x/typst-ts-web-compiler": "^0.7.2"
   },
   "peerDependenciesMeta": {
     "@jchoi2x/typst-ts-renderer": {

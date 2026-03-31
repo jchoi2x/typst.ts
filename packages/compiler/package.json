@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst-ts-web-compiler",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "description": "WASM module for Compiling Typst documents in JavaScript environment.",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",

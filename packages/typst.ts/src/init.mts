@@ -80,7 +80,15 @@ class ComponentBuilder<T> {
           return;
         }
         if (typeof font === 'object' && 'info' in font) {
-          await builder.add_lazy_font(font, 'blob' in font ? font.blob : loadFontSync(font));
+          if ('blob' in font) {
+            await builder.add_lazy_font(font, font.blob);
+            return;
+          }
+
+          // Worker-safe path: prefetch bytes via async fetch, then provide
+          // a synchronous getter expected by add_lazy_font.
+          const bytes = new Uint8Array(await (await fetcher(font.url)).arrayBuffer());
+          await builder.add_lazy_font(font, () => bytes);
           return;
         }
 
