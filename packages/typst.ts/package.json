@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst.ts",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "description": "Run Typst in JavaScriptWorld.",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",

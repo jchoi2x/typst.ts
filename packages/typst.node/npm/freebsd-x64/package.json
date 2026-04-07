@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst-ts-node-compiler-freebsd-x64",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "os": [
     "freebsd"
   ],
