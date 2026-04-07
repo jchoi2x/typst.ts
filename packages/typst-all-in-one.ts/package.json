@@ -42,7 +42,7 @@
         "dist/**/index.js"
     ],
     "scripts": {
-        "build": "bun --cwd ../typst.ts run build && node scripts/cp-all-in-one.mjs",
+        "build": "cd ../typst.ts && bun run build && node scripts/cp-all-in-one.mjs",
         "prepublish": "turbo build",
         "publish:dry": "npm publish --dry-run --access public",
         "publish:lib": "npm publish --access public || exit 0"
