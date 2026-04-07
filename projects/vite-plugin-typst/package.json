@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/vite-plugin-typst",
-  "version": "0.7.0",
+  "version": "0.7.7",
   "description": "Vite plugin for typst",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

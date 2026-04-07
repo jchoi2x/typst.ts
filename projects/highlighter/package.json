@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/highlighter-typst",
-  "version": "0.7.0",
+  "version": "0.7.7",
   "description": "typst code highlighting support in web",
   "author": "Myriad Dreamin <camiyoru@gmail.com>",
   "license": "Apache-2.0",

@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst-ts-node-compiler",
-  "version": "0.7.0",
+  "version": "0.7.7",
   "author": "Myriad-Dreamin",
   "description": "Compile or Render Typst documents in Node environment.",
   "main": "index.js",

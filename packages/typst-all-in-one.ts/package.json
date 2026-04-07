@@ -1,6 +1,6 @@
 {
     "name": "@jchoi2x/typst-all-in-one.ts",
-    "version": "0.7.0",
+    "version": "0.7.7",
     "description": "Run Typst in JavaScriptWorld with a single bundled library.",
     "author": "Myriad-Dreamin",
     "license": "Apache-2.0",

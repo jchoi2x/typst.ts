@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst.svelte",
-  "version": "0.7.0",
+  "version": "0.7.7",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run prepack",

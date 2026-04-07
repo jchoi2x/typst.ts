@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst.vue3",
-  "version": "0.7.0",
+  "version": "0.7.7",
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
