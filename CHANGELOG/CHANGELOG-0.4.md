@@ -79,7 +79,7 @@ This is a major upgrade of typst.ts, so we decide to increment the minor version
 One of the best features since v0.4.0 is that we provide a more user-friendly way to start exploring typst.ts, the all-in-one library apis:
 
 ```
-<script type="module" src="/@jchoi2x/typst.ts/dist/esm/contrib/all-in-one.bundle.js"></script>
+<script type="module" src="/@myriaddreamin/typst.ts/dist/esm/contrib/all-in-one.bundle.js"></script>
 <script>
   document.ready(() => {
     const svg = await $typst.svg({ mainContent: 'Hello, typst!' });

@@ -1,18 +1,18 @@
 # Change Log
 
-All notable changes to the reflexo and "@jchoi2x/\*typst\*" packages will be documented in this file.
+All notable changes to the reflexo and "@myriaddreamin/\*typst\*" packages will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## v0.5.4 - [2024-12-30]
 
-### Package: @jchoi2x/typst.node
+### Package: @myriaddreamin/typst.node
 
 - (Fix) artifacts built by CI were broken.
 
 ## v0.5.3 - [2024-12-29]
 
-### Package: @jchoi2x/typst.node
+### Package: @myriaddreamin/typst.node
 
 - (Fix) both build script and CI script were broken.
 
@@ -22,7 +22,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - (Fix) Updated inline math template, which is broken since typst v0.12.0, by @Enter-tainer in https://github.com/Myriad-Dreamin/typst.ts/pull/615
 
-### Package: @jchoi2x/typst.node
+### Package: @myriaddreamin/typst.node
 
 - Added pdf standard options by @prog-r-amer and @Myriad-Dreamin in https://github.com/Myriad-Dreamin/typst.ts/pull/606
 
@@ -73,7 +73,7 @@ No new security note.
 
 - Bumped typst to 0.12.0 in https://github.com/Myriad-Dreamin/typst.ts/pull/593
 
-### Package: @jchoi2x/typst.node (New)
+### Package: @myriaddreamin/typst.node (New)
 
 - Initialized typst.node in https://github.com/Myriad-Dreamin/typst.ts/pull/460, https://github.com/Myriad-Dreamin/typst.ts/pull/463, and https://github.com/Myriad-Dreamin/typst.ts/pull/464
 - (Fix) Mutating entry state correctly by @seven-mile in https://github.com/Myriad-Dreamin/typst.ts/pull/550
@@ -86,16 +86,16 @@ No new security note.
 - Using typst.node in rehype-typst in https://github.com/Myriad-Dreamin/typst.ts/pull/549
 - Added links to readme by @Loosetooth in https://github.com/Myriad-Dreamin/typst.ts/pull/560
 
-### Package: @jchoi2x/typst.react (New)
+### Package: @myriaddreamin/typst.react (New)
 
 - Supported react 18 by @sinchang in https://github.com/Myriad-Dreamin/typst.ts/pull/438
 - Updated to React 18 client rendering APIs in demo by @sinchang in https://github.com/Myriad-Dreamin/typst.ts/pull/442
 
-### Package: @jchoi2x/typst.vue3 (New)
+### Package: @myriaddreamin/typst.vue3 (New)
 
 - Initialized typst-vue3 (simplified component) by @quank123wip in https://github.com/Myriad-Dreamin/typst.ts/pull/555
 
-### Package: @jchoi2x/typst.solid (New)
+### Package: @myriaddreamin/typst.solid (New)
 
 - Initialized typst.solid by @oluceps in https://github.com/Myriad-Dreamin/typst.ts/pull/584
 
