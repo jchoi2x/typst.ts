@@ -1,6 +1,7 @@
 # typst.ts
 
 **Fork note:** Scoped packages are published as **`@jchoi2x/*`** to [**GitHub Packages**](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry) (`npm.pkg.github.com`), not npmjs. See [docs/github-packages.md](./docs/github-packages.md).
+**Fork note:** This fork is optimized to run on Cloudflare Workers using the `workerd` runtime.
 
 [Markdown](https://github.com/jchoi2x/typst.ts/blob/main/README.md) | [typst](./docs/cookery/introduction.typ) |
 [Online HTML](https://myriad-dreamin.github.io/typst.ts/) |
