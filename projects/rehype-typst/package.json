@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/rehype-typst",
-  "version": "0.7.8",
+  "version": "0.7.11",
   "description": "rehype plugin for rendering typst math equations",
   "main": "index.js",
   "license": "MIT",

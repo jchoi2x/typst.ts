@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst.solid",
-  "version": "0.7.8",
+  "version": "0.7.11",
   "description": "A SolidJS package for Typst integration.",
   "type": "module",
   "exports": {

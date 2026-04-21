@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst-ts-web-compiler",
-  "version": "0.7.8",
+  "version": "0.7.11",
   "description": "WASM module for Compiling Typst documents in JavaScript environment.",
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
@@ -50,9 +50,10 @@
   ],
   "scripts": {
     "build:dev": "wasm-pack build --target web --scope jchoi2x --dev -- --no-default-features --features web,misc",
-    "build:node": "wasm-pack build --target nodejs --scope jchoi2x -- --no-default-features --features web,misc",
-    "build": "wasm-pack build --target web --scope jchoi2x -- --no-default-features --features web,misc && node ../tools/wasm-debundle.mjs",
-    "build:with-fonts": "wasm-pack build --target web --scope jchoi2x -- --no-default-features --features web,fonts,misc && node ../tools/wasm-debundle.mjs",
+    "build:node": "CARGO_PROFILE_RELEASE_OPT_LEVEL=z CARGO_PROFILE_RELEASE_LTO=fat CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1 CARGO_PROFILE_RELEASE_PANIC=abort wasm-pack build --target nodejs --scope jchoi2x -- --no-default-features --features web,misc",
+    "build": "CARGO_PROFILE_RELEASE_OPT_LEVEL=z CARGO_PROFILE_RELEASE_LTO=fat CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1 CARGO_PROFILE_RELEASE_PANIC=abort wasm-pack build --target web --scope jchoi2x -- --no-default-features --features web,misc && node ../tools/wasm-debundle.mjs",
+    "build:with-fonts": "CARGO_PROFILE_RELEASE_OPT_LEVEL=z CARGO_PROFILE_RELEASE_LTO=fat CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1 CARGO_PROFILE_RELEASE_PANIC=abort wasm-pack build --target web --scope jchoi2x -- --no-default-features --features web,fonts,misc && node ../tools/wasm-debundle.mjs",
+    "build:pdf-only": "CARGO_PROFILE_RELEASE_OPT_LEVEL=z CARGO_PROFILE_RELEASE_LTO=fat CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1 CARGO_PROFILE_RELEASE_PANIC=abort wasm-pack build --target web --scope jchoi2x -- --no-default-features --features web,pdf && node ../tools/wasm-debundle.mjs",
     "prepublish": "turbo build",
     "publish:dry": "npm publish --dry-run --access public",
     "publish:lib": "npm publish --access public || exit 0"

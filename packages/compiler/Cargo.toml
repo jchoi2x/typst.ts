@@ -76,14 +76,17 @@ workspace = true
 [package.metadata.wasm-pack.profile.profiling]
 wasm-opt = [
     '-O',
+    '--converge',
     '--enable-bulk-memory',
     '--enable-sign-ext',
     '--enable-nontrapping-float-to-int',
 ]
 
 [package.metadata.wasm-pack.profile.release]
+# `--converge` runs optimization passes until wasm size stops shrinking (often ~1MB on this crate).
 wasm-opt = [
-    '-O',
+    '-Oz',
+    '--converge',
     '--enable-bulk-memory',
     '--enable-sign-ext',
     '--enable-nontrapping-float-to-int',
