@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-yarn add @jchoi2x/typst.svelte
+bun add @jchoi2x/typst.svelte
 ```
 
 ## Usage

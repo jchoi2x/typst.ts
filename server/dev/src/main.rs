@@ -108,20 +108,20 @@ fn compile_corpus(args: CompileCorpusArgs) {
     exit(0);
 }
 
-const fn yarn_cmd() -> &'static str {
+const fn bun_cmd() -> &'static str {
     if cfg!(windows) {
-        "yarn.cmd"
+        "bun.exe"
     } else {
-        "yarn"
+        "bun"
     }
 }
 
 async fn watch(watch_sub: WatchSubCommands) {
-    let watch_renderer_cmd = "yarn workspace @jchoi2x/typst-ts-renderer watch";
+    let watch_renderer_cmd = "bun --cwd packages/renderer run watch";
     let watch_renderer_group = ("renderer", watch_renderer_cmd);
-    let watch_core_cmd = "yarn workspace @jchoi2x/typst.ts build:dev";
+    let watch_core_cmd = "bun --cwd packages/typst.ts run build:dev";
     let watch_core_group = ("core", watch_core_cmd);
-    let serve_http_cmd = "yarn dev:run";
+    let serve_http_cmd = "bun run dev:run";
     let serve_http_group = ("http", serve_http_cmd);
 
     let mut groups = vec![];
@@ -139,8 +139,8 @@ async fn watch(watch_sub: WatchSubCommands) {
     for (grp, cmd) in groups {
         log::info!("spawn group: {grp}");
         let args = cmd.split(' ').collect::<Vec<_>>();
-        let mut cmd = tokio::process::Command::new(if args[0] == "yarn" {
-            yarn_cmd()
+        let mut cmd = tokio::process::Command::new(if args[0] == "bun" {
+            bun_cmd()
         } else {
             args[0]
         });

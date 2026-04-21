@@ -1,5 +1,7 @@
 # Typst.ts
 
+This package is a fork of [Typst.ts](https://github.com/Myriad-Dreamin/typst.ts), optimized to run in Cloudflare Workers.
+
 Usage:
 
 ```typescript

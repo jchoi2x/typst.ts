@@ -5,7 +5,7 @@ A [Vite](https://vitejs.dev/) plugin for [typst](https://www.typst.app/).
 ## Installation
 
 ```bash
-yarn add -D @jchoi2x/vite-plugin-typst
+bun add -D @jchoi2x/vite-plugin-typst
 ```
 
 ### Installing Typst Support
@@ -18,7 +18,7 @@ Two providers are expected to work:
 Install the `@jchoi2x/typst-ts-node-compiler` package to add support for `.typ` files:
 
 ```bash
-yarn add -D @jchoi2x/typst-ts-node-compiler
+bun add -D @jchoi2x/typst-ts-node-compiler
 ```
 
 ## On-demand JS import (examples/js-import)

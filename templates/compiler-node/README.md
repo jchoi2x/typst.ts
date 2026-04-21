@@ -1,7 +1,7 @@
 # Typst Template for Typescript+node.js
 
 ```shell
-yarn install
+bun install
 # full example
 npx tsc && node ./dist/esm/main.js
 ```

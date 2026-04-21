@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst-ts-node-compiler",
-  "version": "0.7.0",
+  "version": "0.7.11",
   "author": "Myriad-Dreamin",
   "description": "Compile or Render Typst documents in Node environment.",
   "main": "index.js",
@@ -59,8 +59,8 @@
     "napi": "napi",
     "tsc": "tsc",
     "prepublish:napi": "napi prepublish -t npm",
-    "publish-gh:dry": "yarn prepublish:napi && npm publish --dry-run --access public",
-    "publish-gh:lib": "yarn prepublish:napi && npm publish --access public || exit 0",
+    "publish-gh:dry": "bun run prepublish:napi && npm publish --dry-run --access public",
+    "publish-gh:lib": "bun run prepublish:napi && npm publish --access public || exit 0",
     "publish:dry": "exit 0",
     "publish:lib": "exit 0",
     "test": "ava",

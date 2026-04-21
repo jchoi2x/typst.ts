@@ -7,8 +7,8 @@
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
   "dependencies": {
-    "@jchoi2x/typst-ts-renderer": "^0.7.0",
-    "@jchoi2x/typst.ts": "^0.7.0"
+    "@jchoi2x/typst-ts-renderer": "workspace:*",
+    "@jchoi2x/typst.ts": "workspace:*"
   },
   "devDependencies": {
     "@types/web": "^0.0.188",

@@ -12,7 +12,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     rollupOptions: {
-      external: ['typst-ts-solid'],
+      external: ['@jchoi2x/typst.solid'],
     },
   },
 });

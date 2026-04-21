@@ -1,6 +1,6 @@
 {
     "name": "@jchoi2x/typst-all-in-one.ts",
-    "version": "0.7.0",
+    "version": "0.7.11",
     "description": "Run Typst in JavaScriptWorld with a single bundled library.",
     "author": "Myriad-Dreamin",
     "license": "Apache-2.0",
@@ -42,12 +42,12 @@
         "dist/**/index.js"
     ],
     "scripts": {
-        "build": "cd ../typst.ts && yarn build && node scripts/cp-all-in-one.mjs",
+        "build": "cd ../typst.ts && bun run build && node scripts/cp-all-in-one.mjs",
         "prepublish": "turbo build",
         "publish:dry": "npm publish --dry-run --access public",
         "publish:lib": "npm publish --access public || exit 0"
     },
     "devDependencies": {
-        "@jchoi2x/typst.ts": "*"
+        "@jchoi2x/typst.ts": "workspace:*"
     }
 }

@@ -228,14 +228,14 @@ Note: Since we use turborepo for `>=v0.4.0` development, if you are the earlier 
 
 ```shell
 # Install and build the renderer
-$ yarn install && yarn build:pkg
+$ bun install && bun run build:pkg
 # Build the example artifacts
-$ yarn corpus
+$ bun run corpus
 # Run development server
-$ yarn dev
+$ bun run dev
 ```
 
 And open `http://127.0.0.1:20810` in your browser.
 
-You can also run `yarn run build:core` instead of `yarn run build:pkg` to build
+You can also run `bun run build:core` instead of `bun run build:pkg` to build
 core library (`@jchoi2x/typst.ts`) and avoid building the WASM modules from source.

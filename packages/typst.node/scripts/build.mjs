@@ -17,18 +17,18 @@ const napiArgs = [
   ...args,
 ];
 
-const YARN = process.platform === 'win32' ? 'yarn.cmd' : 'yarn';
+const BUN = process.platform === 'win32' ? 'bun.exe' : 'bun';
 
 // https://github.com/nodejs/node/issues/52554
 const opts = { stdio: 'inherit', shell: true };
 
-const napi = spawnSync(YARN, napiArgs, opts);
+const napi = spawnSync(BUN, ['run', ...napiArgs], opts);
 if (napi.error || napi.status !== 0) {
   console.log('napi', napi.status, napi.error);
   process.exit(napi.status);
 }
 
-const tsc = spawnSync(YARN, ['tsc'], opts);
+const tsc = spawnSync(BUN, ['run', 'tsc'], opts);
 if (tsc.error || tsc.status !== 0) {
   console.log('tsc', tsc.status, tsc.error);
   process.exit(tsc.status);

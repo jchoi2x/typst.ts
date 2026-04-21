@@ -36,13 +36,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'yarn'
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Install deps
-        run: yarn install
+        run: bun install --frozen-lockfile
       - id: announce
         name: 'Generate announcement'
         run: |
-          yarn draft-release ${{ inputs.tag }}
+          bun run draft-release ${{ inputs.tag }}
           echo "draft-release ran successfully"
       - name: 'Upload announcement changelog'
         uses: actions/upload-artifact@v4

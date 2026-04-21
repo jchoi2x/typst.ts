@@ -53,13 +53,14 @@ jobs:
       - name: Build
         run: |
           cargo build --profile dist --bin typst-ts-cli
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Install packages
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
+        run: bun install --frozen-lockfile
       - name: Build Typescript packages
         run: |
-          yarn run build:pkg
+          bun run build:pkg
       - name: Prepare artifacts
         run: |
           shiroa build --font-path assets/fonts --path-to-root /typst.ts/cookery/ -w . -d ../../github-pages/cookery/ docs/cookery

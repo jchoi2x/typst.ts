@@ -3,19 +3,19 @@
 ## Installation
 
 ```shell
-yarn install
+bun install
 ```
 
 ## Development
 
 ```shell
-yarn dev
+bun run dev
 ```
 
 ## Building
 
 ```shell
-yarn build
+bun run build
 ```
 
 Check it using any http server, for example, using python http server:

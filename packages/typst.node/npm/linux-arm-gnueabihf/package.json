@@ -1,6 +1,6 @@
 {
   "name": "@jchoi2x/typst-ts-node-compiler-linux-arm-gnueabihf",
-  "version": "0.7.0",
+  "version": "0.7.11",
   "os": [
     "linux"
   ],

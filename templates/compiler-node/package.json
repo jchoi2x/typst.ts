@@ -7,7 +7,7 @@
   "author": "Myriad-Dreamin",
   "license": "Apache-2.0",
   "dependencies": {
-    "@jchoi2x/typst-ts-node-compiler": "^0.7.0"
+    "@jchoi2x/typst-ts-node-compiler": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.6.3",

@@ -10,12 +10,12 @@
     "dev": "vite",
     "build": "vite build",
     "test": "vitest run",
-    "test-install": "yarn playwright install-deps && yarn playwright install"
+    "test-install": "bunx playwright install-deps && bunx playwright install"
   },
   "dependencies": {
-    "@jchoi2x/typst-ts-renderer": "^0.7.0",
-    "@jchoi2x/typst-ts-web-compiler": "^0.7.0",
-    "@jchoi2x/typst.ts": "^0.7.0",
+    "@jchoi2x/typst-ts-renderer": "workspace:*",
+    "@jchoi2x/typst-ts-web-compiler": "workspace:*",
+    "@jchoi2x/typst.ts": "workspace:*",
     "react": "^19.x",
     "react-dom": "^19.x"
   },

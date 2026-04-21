@@ -1,5 +1,6 @@
 import sys
 import itertools
+import glob
 
 
 def replace_version(package_file: str, old_version: str, new_version: str):
@@ -39,18 +40,12 @@ def main(old_version: str, new_version: str):
   bump_javascript_self_version = lambda: itertools.product(
     [ # file paths
       "package.json",
-      "packages/enhanced-typst-svg/package.json",
-      "packages/parser/package.json",
-      "packages/compiler/package.json",
-      "packages/renderer/package.json",
-      "projects/hexo-renderer-typst/package.json",
-      "packages/typst.ts/package.json",
-      "packages/typst.react/package.json",
-      "packages/typst.angular/projects/typst.angular/package.json",
+      *sorted(glob.glob("packages/**/package.json", recursive=True)),
+      *sorted(glob.glob("projects/**/package.json", recursive=True)),
     ], [ # patterns
       lambda v: f'"version": "{v}"',
     ])
-  
+
   bump_self_version = lambda: itertools.chain(
     bump_rust_self_version(),
     bump_javascript_self_version(),
